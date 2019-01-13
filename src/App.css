@@ -1,5 +1,49 @@
+@font-face {
+  font-family: HKGrotesk;
+  src: url(hkgrotesk_bold.woff);
+  font-weight: 700
+}
+
+@font-face {
+  font-family: HKGrotesk;
+  src: url(hkgrotesk_regular.woff);
+  font-weight: 400
+}
+
+@font-face {
+  font-family: TiemposHeadline;
+  src: url(TiemposHeadline-Bold.woff);
+  font-weight: 700
+}
+
+p {
+  font-family: 'HKGrotesk', Roboto, sans-serif;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'TiemposHeadline', serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 38px;
+  color: #FFFFFF;
+  padding-top: 40px;
+}
+
+h2 {
+  font-family: 'HKGrotesk', Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
 .App {
-  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .App-logo {
@@ -8,19 +52,29 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0A0325;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  line-height: 1.4;
 }
 
 .App-link {
   color: #61dafb;
 }
+
+#logo {
+  display: inherit;
+  text-align: center;
+  font-family: 'TiemposHeadline', serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 12px 0 4px 0;
+    }
+
 
 @keyframes App-logo-spin {
   from {
@@ -29,4 +83,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+    h1 {
+      font-size: 64px;
+    }
+
+    h2 {
+      font-size: 34px;
+    }
 }
