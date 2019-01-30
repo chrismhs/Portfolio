@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @font-face {
   font-family: HKGrotesk;
   src: url(hkgrotesk_bold.woff);
@@ -49,21 +52,6 @@ h2 {
   color: #61dafb;
 }
 
-#logo {
-  display: inherit;
-  text-align: center;
-  font-family: 'TiemposHeadline', serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  font-size: 24px;
-  color: #FFFFFF;
-  padding: 12px 0 4px 0;
-    }
-
-#contact {
-  float: right;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -109,3 +97,4 @@ h2 {
       font-size: 34px;
     }
 }
+
