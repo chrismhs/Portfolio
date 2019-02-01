@@ -9,6 +9,8 @@ const SlideView = styled.div `
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+    border-radius: 15px;
+
 `
 
 class Slide extends React.Component {
