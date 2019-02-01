@@ -1,22 +1,37 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components"
+import Slide from '../Slide';
 import img1 from './CMS-on-red copy.jpg';
 import img2 from './Dashboard.jpg';
 import img3 from './EM.png';
 
 const Container = styled.div`
+padding-bottom: 100px;
 `
 
-const Slide = styled.div`
-  height: 500px;
-  background-image: url(${img1}) no-repeat center / cover;
-  background-color: red;
-`
-const Img = styled.img`
-  height: 100%;
-`
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
 
 class SimpleSlider extends React.Component {
   render() {
@@ -26,23 +41,22 @@ class SimpleSlider extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     };
     return (
       <Container>
         <Slider {...settings}>
           <div>
-            <Slide>
-              <Img></Img>
+            <Slide src={img1}>
             </Slide>
           </div>
           <div>
-            <Slide>
-              <Img src={img2}></Img>
+            <Slide src={img2}>
             </Slide>
           </div>
           <div>
-          <Slide>
-              <Img src={img3}></Img>
+            <Slide src={img3}>
             </Slide>
           </div>
         </Slider>

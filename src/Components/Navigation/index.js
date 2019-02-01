@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 const Nav = styled.div `
-	
+	text-align: center;
 `
 
 const Logo = styled.div `
@@ -16,10 +16,13 @@ const Logo = styled.div `
 	font-size: 24px;
 	color: #FFFFFF;
 	padding: 12px 0 4px 0;
+	position: absolute;
+	width: 100%;
 `;
 
 const Contact = styled.p `
 	float: right;
+	padding-top: 16px;
 `;
 
 const Navigation = () => (
