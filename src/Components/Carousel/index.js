@@ -2,10 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components"
 import Slide from '../Slide';
-import img1 from './CMS-on-red copy.jpg';
-import img2 from './AgentPortal.png';
+import img1 from './AgentPortal.png';
+import img2 from './CMS-on-red copy.jpg';
 import img3 from './EM.png';
-import sliderarrow from './right-arrow.png';
+import sliderarrow from './right-arrow.svg';
+
 import theme from '../../styles/theme.style';
 
 const Container = styled.div`
@@ -16,14 +17,43 @@ const SliderWrapper = styled.div`
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);  
   height: 500px;
 `
+const ProjectsHeader = styled.h1`
+  position: absolute;
+  z-index: 1000;
+  margin: -45px 0 0 20px;
+`
+const PartialLine = styled.div`
+  width: 160px;
+  height: 4px;
+  background-color: #000000;
+  margin-top: 5px;
+`
+
+const SliderArrow = styled.img`
+  display: block;
+  height: 30px;
+  width: 20px;
+  // margin-right: 50px;
+  z-index: 1000;
+  color: #000000;
+  fill: currentColor;
+
+`
+
+const SliderArrowLeft = styled(SliderArrow)`
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-top: -15px;
+  // margin-left: 50px;
+`
 
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img src={sliderarrow}
+    <SliderArrow src={sliderarrow}
       className={className}
-      style={{ ...style, display: "block"}}
+      style={{ ...style}}
       onClick={onClick}
     />
   );
@@ -32,18 +62,18 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img src={sliderarrow}
+    <SliderArrowLeft left src={sliderarrow}
       className={className}
-      style={{ ...style, display: "block"}}
+      style={{ ...style}}
       onClick={onClick}
     />
   );
 }
 
 const slides = [
-  {src:img1, color:theme.PROJECT_ONE_BG},
-  {src:img2, color:theme.PROJECT_TWO_BG},
-  {src:img3, color:theme.PROJECT_THREE_BG},
+  {src:img1, color:theme.one},
+  {src:img2, color:theme.two},
+  {src:img3, color:theme.three},
 ]
 
 class SimpleSlider extends React.Component {
@@ -66,6 +96,10 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Container>
+        <ProjectsHeader>
+          Projects
+          <PartialLine />
+        </ProjectsHeader>
         <SliderWrapper>
           <Slider {...settings}>
             {slides.map((slide,i) => {

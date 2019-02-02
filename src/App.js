@@ -11,13 +11,18 @@ import Carousel from './Components/Carousel'
 
 
 const Body = styled.div`
-  background-color: ${props => props.themeColor};
-  transition: background 0.5s linear;
+  background-color: ${props => props.themeColor.background};
+  color: ${props => props.themeColor.foreground};
+  transition: 0.5s linear;
 `
+const a = styled.a`
+  font-color: ${props => props.themeColor.link};
+`
+
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {themeColor: theme.PRIMARY_COLOR};
+    this.state = {themeColor: theme.one};
   }
 
   changeThemeColor(bgcolor){

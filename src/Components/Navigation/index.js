@@ -14,21 +14,22 @@ const Logo = styled.div `
 	font-weight: 700;
 	line-height: normal;
 	font-size: 24px;
-	color: #FFFFFF;
 	padding: 12px 0 4px 0;
-	position: absolute;
-	width: 100%;
+	left: 50%;
+    margin-left: -32px;
+    position: absolute;
 `;
 
-const Contact = styled.p `
+const Contact = styled.a `
 	float: right;
 	padding-top: 16px;
 `;
 
 const Navigation = () => (
 	<Nav>
+		<Contact href="www.google.com"> Contact</Contact>
 		<Logo>chris.</Logo>
-		<Contact> Contact</Contact>
+
   	</Nav>
 );
 

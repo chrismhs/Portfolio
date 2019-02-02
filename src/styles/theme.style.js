@@ -1,14 +1,6 @@
 export default {
-    FONT_SIZE_SMALL: 12,
-    FONT_SIZE_MEDIUM: 14,
-    FONT_SIZE_LARGE: 16,
-    PRIMARY_COLOR: '#0A0325',
-    PRIMARY_FONT_COLOR: '#FFFFFF',
-    FONT_WEIGHT_LIGHT: 200,
-    FONT_WEIGHT_MEDIUM: 600,
-    FONT_WEIGHT_HEAVY: 800,
-
-    PROJECT_ONE_BG: 'red',
-    PROJECT_TWO_BG: '#1B1E27',
-    PROJECT_THREE_BG: 'rgb(238, 167, 2)',
+    primary: {background: '#0A0325', foreground: '#FFFFFF'},
+    one: {background: '#F6F6F6', foreground: '#1B1E27', link: 'red',},
+    two: {background: '#2D0052', foreground: '#FF2412', link: 'green',},
+    three: {background: '#222222', foreground: '#FFFFFF', link: 'blue',},
   };

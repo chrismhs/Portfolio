@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components"
 
 const Container = styled.div`
-  padding-bottom: 100px;
+  padding-top: 180px;
+  padding-bottom: 120px;
 `
 
 class Biography extends React.Component {
