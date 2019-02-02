@@ -1,0 +1,3 @@
+[submodule "lib/react-slick"]
+	path = lib/react-slick
+	url = https://github.com/akiran/react-slick

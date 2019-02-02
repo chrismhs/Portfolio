@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import FadeIn from 'react-fade-in';
+// import FadeIn from 'react-fade-in';
 import './App.css';
 
 import theme from './styles/theme.style';
@@ -34,13 +34,13 @@ class App extends Component {
             <div className="container">
               <Navigation />
               <Biography />
-              <FadeIn transitionDuration={800}>
+              {/* <FadeIn transitionDuration={800}> */}
                 <Carousel
                   currentTheme={this.state.theme}
                   changeThemeColor={this.changeThemeColor.bind(this)}
                 />
                 <Experimentation />
-              </FadeIn>
+              {/* </FadeIn> */}
             </div>
           </header>
         </div>
