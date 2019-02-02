@@ -34,7 +34,7 @@ const SliderArrow = styled.img`
   display: ;
   height: 30px;
   width: 20px;
-  // margin-right: 50px;
+  margin-right: 50px;
   z-index: 1000;
   color: #000000;
   fill: currentColor;
@@ -46,7 +46,7 @@ const SliderArrowLeft = styled(SliderArrow)`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   margin-top: -15px;
-  // margin-left: 50px;
+  margin-left: 50px;
 `
 
 
