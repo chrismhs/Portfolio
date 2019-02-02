@@ -31,8 +31,8 @@ body {
 
 p {
   font-family: 'HKGrotesk', Roboto, sans-serif;
-  line-height: 1.4;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -45,12 +45,28 @@ h1 {
 }
 
 h2 {
+  font-family: 'TiemposHeadline', serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 34px;
+}
+
+h3 {
   font-family: 'HKGrotesk', Roboto, sans-serif;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.4;
   font-size: 20px;
   opacity: 0.7;
 }
+
+a {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
 
 
 /* Small devices (tablets, 768px and up) */
@@ -61,7 +77,11 @@ h2 {
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 
 }
@@ -74,7 +94,11 @@ h2 {
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 24px;
   }
 }
 
@@ -85,7 +109,11 @@ h2 {
     }
 
     h2 {
-      font-size: 34px;
+      font-size: 48px;
+    }
+
+    h3 {
+      font-size: 24px;
     }
 }
 

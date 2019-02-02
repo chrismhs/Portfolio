@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Slide from '../Slide';
 import img1 from './AgentPortal.png';
 import img2 from './CMS-on-red copy.jpg';
-import img3 from './EM.png';
+import img3 from './Main_layup.jpg';
 import sliderarrow from './right-arrow.svg';
 
 import theme from '../../styles/theme.style';
@@ -17,26 +17,28 @@ const SliderWrapper = styled.div`
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);  
   height: 500px;
 `
-const ProjectsHeader = styled.h1`
+const ProjectsHeader = styled.h2`
   position: absolute;
   z-index: 1000;
-  margin: -45px 0 0 20px;
+  margin-top: -35px;
+  padding: 0;
 `
 const PartialLine = styled.div`
-  width: 160px;
+  width: 120px;
   height: 4px;
   background-color: #000000;
   margin-top: 5px;
 `
 
 const SliderArrow = styled.img`
-  display: block;
+  display: ;
   height: 30px;
   width: 20px;
   // margin-right: 50px;
   z-index: 1000;
   color: #000000;
   fill: currentColor;
+  border: 1px;
 
 `
 
@@ -76,7 +78,7 @@ const slides = [
   {src:img3, color:theme.three},
 ]
 
-class SimpleSlider extends React.Component {
+class Carousel extends React.Component {
 
   slideChanged (currentSlide) {
     this.props.changeThemeColor(slides[currentSlide].color)
@@ -96,8 +98,7 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Container>
-        <ProjectsHeader>
-          Projects
+        <ProjectsHeader className="col-md-10 col-lg-8 offset-md-1">Projects
           <PartialLine />
         </ProjectsHeader>
         <SliderWrapper>
@@ -117,4 +118,4 @@ class SimpleSlider extends React.Component {
   }
 }
 
-export default SimpleSlider
+export default Carousel;

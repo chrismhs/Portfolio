@@ -10,6 +10,9 @@ const SlideView = styled.div `
     background-size: cover;
     position: relative;
     border-radius: 15px;
+    @media (max-width: 700px) {
+        background-position: left;
+    }
 
 `
 

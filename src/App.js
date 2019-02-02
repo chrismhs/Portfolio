@@ -8,15 +8,12 @@ import theme from './styles/theme.style';
 import Biography from './Components/Bio'
 import Navigation from './Components/Navigation'
 import Carousel from './Components/Carousel'
-
+import Experimentation from './Components/Experimentation'
 
 const Body = styled.div`
   background-color: ${props => props.themeColor.background};
   color: ${props => props.themeColor.foreground};
   transition: 0.5s linear;
-`
-const a = styled.a`
-  font-color: ${props => props.themeColor.link};
 `
 
 class App extends Component {
@@ -39,8 +36,10 @@ class App extends Component {
               <Biography />
               <FadeIn transitionDuration={800}>
                 <Carousel
+                  currentTheme={this.state.theme}
                   changeThemeColor={this.changeThemeColor.bind(this)}
                 />
+                <Experimentation />
               </FadeIn>
             </div>
           </header>

@@ -11,9 +11,9 @@ class Biography extends React.Component {
     return (
       <Container>
         <div className="row">
-          <div className="col-md-10 col-lg-8">
+          <div className="col-md-10 col-lg-8 offset-md-1">
             <h1>Chris, a product designer based in London.</h1>
-            <h2>Currently working at Triptease, helping hotels drive direct bookings.</h2>
+            <h3>Currently working at Triptease, helping hotels drive direct bookings.</h3>
           </div>
         </div>
       </Container>
