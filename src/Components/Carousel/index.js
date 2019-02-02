@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components"
 import Slide from '../Slide';
-import img1 from './AgentPortal.png';
+import img1 from './TT.png';
 import img2 from './CMS-on-red copy.jpg';
 import img3 from './Main_layup.jpg';
 import sliderarrow from './right-arrow.svg';
@@ -16,6 +16,7 @@ const SliderWrapper = styled.div`
   border-radius: 15px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);  
   height: 500px;
+
 `
 const ProjectsHeader = styled.h2`
   position: absolute;
