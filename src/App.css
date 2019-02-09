@@ -57,17 +57,47 @@ h3 {
   font-weight: 700;
   line-height: 1.4;
   font-size: 20px;
-  opacity: 0.7;
 }
 
 a {
-  color: #000000;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: underline;
+  font-family: 'HKGrotesk', Roboto, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
 }
 
+a:hover {
+  font-family: 'HKGrotesk', Roboto, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
 
+a::after{
+  content: "";
+  background: white;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: all .3s ease-out;
+}
+
+a:hover::after{
+  width: 100%;
+}
+  
+
+.theme1 a {
+  color: red;
+}
+
+.theme2 {
+  
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -98,7 +128,7 @@ a {
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
@@ -113,7 +143,7 @@ a {
     }
 
     h3 {
-      font-size: 24px;
+      font-size: 32px;
     }
 }
 

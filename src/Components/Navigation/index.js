@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import styled, { withTheme } from 'styled-components';
 
 
 const Nav = styled.div `
 	text-align: center;
+	padding-bottom: 60px;
 `
 
 const Logo = styled.div `
@@ -22,15 +24,21 @@ const Logo = styled.div `
 
 const Contact = styled.a `
 	float: right;
-	padding-top: 16px;
+	margin-top: 16px;
+	color: ${props => props.theme.link} !important;
+	
+	:after {
+        color: ${props => props.theme.background}
+        background: ${props => props.theme.link}
+    }
 `;
 
 const Navigation = () => (
 	<Nav>
-		<Contact href="www.google.com"> Contact</Contact>
+		<Link to="/contact"><Contact href="">Contact</Contact></Link>
 		<Logo>chris.</Logo>
 
   	</Nav>
 );
 
-export default Navigation;
+export default withTheme(Navigation);

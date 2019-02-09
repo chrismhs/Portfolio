@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components"
 
 const Container = styled.div`
-  padding-top: 180px;
+  padding-top: 120px;
   padding-bottom: 120px;
 `
 
