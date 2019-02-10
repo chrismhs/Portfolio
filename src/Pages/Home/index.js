@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
+import FadeIn from 'react-fade-in';
 
 import Biography from '../../Components/Bio'
 import Carousel from '../../Components/Carousel'
@@ -13,12 +14,14 @@ class Home extends Component {
     render() {
         return (
             <Container>
-                <Biography />
-                <Carousel
-                    currentTheme={this.props.theme}
-                    changeThemeColor={this.props.changeThemeColor}
-                />
-                <Experimentation />
+                <FadeIn>
+                    <Biography />
+                    <Carousel
+                        currentTheme={this.props.theme}
+                        changeThemeColor={this.props.changeThemeColor}
+                    />
+                    <Experimentation />
+                </FadeIn>
             </Container>
         )
     }

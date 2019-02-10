@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
-// import FadeIn from 'react-fade-in';
+import ScrollToTop from 'react-router-scroll-top'
 import './App.css';
 
 import theme from './styles/theme.style';
@@ -20,6 +20,7 @@ const Body = styled.div`
   transition: 0.5s linear;
 `
 
+
 class App extends Component {
   state = {
     theme: theme.one
@@ -32,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <ScrollToTop>
         <ThemeProvider theme={this.state.theme}>
           <Body>
             <div className="App">
@@ -47,6 +49,7 @@ class App extends Component {
             </div>
           </Body>
         </ThemeProvider>
+        </ScrollToTop>
       </Router>
     );
   }

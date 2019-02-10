@@ -60,14 +60,18 @@ h3 {
 }
 
 a {
-  font-family: 'HKGrotesk', Roboto, sans-serif;
-  font-weight: 700;
   text-decoration: none;
   position: relative;
   cursor: pointer;
 }
 
 a:hover {
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+a.fancy {
   font-family: 'HKGrotesk', Roboto, sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -75,9 +79,16 @@ a:hover {
   cursor: pointer;
 }
 
-a::after{
+a.fancy:hover {
+  font-family: 'HKGrotesk', Roboto, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+a.fancy::after {
   content: "";
-  background: white;
   width: 0%;
   height: 2px;
   position: absolute;
@@ -86,17 +97,18 @@ a::after{
   transition: all .3s ease-out;
 }
 
-a:hover::after{
+a.fancy:hover::after{
   width: 100%;
 }
   
-
-.theme1 a {
-  color: red;
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
 }
 
-.theme2 {
-  
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 }
 
 /* Small devices (tablets, 768px and up) */

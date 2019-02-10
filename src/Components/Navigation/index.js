@@ -10,6 +10,7 @@ const Nav = styled.div `
 
 const Logo = styled.div `
 	display: inherit;
+	color: ${props => props.theme.foreground} !important;
 	text-align: center;
 	font-family: 'TiemposHeadline', serif;
 	font-style: normal;
@@ -35,8 +36,8 @@ const Contact = styled.a `
 
 const Navigation = () => (
 	<Nav>
-		<Link to="/contact"><Contact href="">Contact</Contact></Link>
-		<Logo>chris.</Logo>
+		<Link to="/contact"><Contact href="" className="fancy">Contact</Contact></Link>
+		<Link to="/"><Logo>chris.</Logo></Link>
 
   	</Nav>
 );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
+import FadeIn from 'react-fade-in';
 
 import Logo from './Logo.png';
 import img1 from './AgentPortal-half.png';
@@ -34,19 +35,21 @@ const Anchor = styled.a`
 class Triptease extends Component {
     render() {
         return (
+            
             <Container>
+                <FadeIn>
                 <ProjectSummary
                     projectLogo={Logo}
-                    projectName="Entry Manager"
+                    projectName="Agent Portal"
                     synopsis="A door managament solution built for speed. Built on iOS and Android for both mobile and tablet devices, it aims to be the most efficient ticket scanner in the market, scanning up to 2,000 tickets an hour."
                     mainImg={img1}
                 ></ProjectSummary>
                 <AnchorContainer>
-                    <Anchor>Challenges & opportunities</Anchor>
-                    <Anchor>The users</Anchor>
-                    <Anchor>Design process</Anchor>
-                    <Anchor>Testing</Anchor>
-                    <Anchor>In hindsight...</Anchor>
+                    <Anchor className="fancy">Challenges & opportunities</Anchor>
+                    <Anchor className="fancy">The users</Anchor>
+                    <Anchor className="fancy">Design process</Anchor>
+                    <Anchor className="fancy">Testing</Anchor>
+                    <Anchor className="fancy">In hindsight...</Anchor>
                 </AnchorContainer>
                 <TextSection
                     sectionHeader="Challenges & opportunities"
@@ -64,7 +67,7 @@ class Triptease extends Component {
                         {src:img2},
                     ]}
                 />
-
+            </FadeIn>
             </Container>
         )
     }
