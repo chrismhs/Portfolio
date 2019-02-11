@@ -33,6 +33,7 @@ const ProjectLink = styled.div`
   position: absolute;
   right: 50px;
   margin-top: -30px;
+  cursor:'pointer'
 
   @media (max-width: 768px) {
     right: 0;
