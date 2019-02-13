@@ -32,8 +32,8 @@ const ProjectLink = styled.div`
   z-index: 1000;
   position: absolute;
   right: 50px;
-  margin-top: -30px;
-  cursor:'pointer'
+  margin-top: 30px;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     right: 0;
@@ -122,9 +122,7 @@ class Carousel extends React.Component {
     return (
       <Container>
         <ProjectLink>
-          <Link to={slides[this.state.currentSlide].link}>
-            <Button buttonText="View project"/>
-          </Link>
+            <Button buttonText="View project" onClick={slides[this.state.currentSlide]}/>
         </ProjectLink>
       
         <ProjectsHeader className="col-md-10 col-lg-8 offset-md-1">Projects

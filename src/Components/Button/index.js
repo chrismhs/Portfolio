@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components"
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const ButtonUI = styled.a`
+const ButtonUI = styled.button`
     height: 44px;
     background-color: ${props => props.theme.background};
     color: ${props => props.theme.link} !important;
@@ -14,6 +15,14 @@ const ButtonUI = styled.a`
     text-decoration: none;
     font-family: 'HKGrotesk', Roboto, sans-serif;
     font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px 0px ${props => props.theme.link};
+
+    :after {
+        color: ${props => props.theme.link} !important;
+        filter: brightness(150%;)
+        margin-top: -10px;
+    }
 `
 
 
@@ -22,9 +31,11 @@ class Button extends React.Component {
 
     render() {
         return (
-            <ButtonUI onClick={this.props.onClick}>
-                {this.props.buttonText}
-            </ButtonUI>
+            <Link to={this.props.onClick.link}>
+                <ButtonUI>
+                    {this.props.buttonText}
+                </ButtonUI>
+            </Link>
         );
     }
 }

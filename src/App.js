@@ -1,8 +1,9 @@
+import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import styled, { ThemeProvider } from "styled-components";
 import ScrollToTop from 'react-router-scroll-top'
-import './App.css';
 
 import theme from './styles/theme.style';
 
@@ -19,7 +20,6 @@ const Body = styled.div`
   color: ${props => props.theme.foreground};
   transition: 0.5s linear;
 `
-
 
 class App extends Component {
   state = {

@@ -6,6 +6,7 @@ import styled, { withTheme } from 'styled-components';
 const Nav = styled.div `
 	text-align: center;
 	padding-bottom: 60px;
+	position: relative;
 `
 
 const Logo = styled.div `
@@ -26,7 +27,13 @@ const Logo = styled.div `
 const Contact = styled.a `
 	float: right;
 	margin-top: 16px;
-	color: ${props => props.theme.link} !important;
+	color: ${props => props.theme.link};
+	padding-right: 0;
+
+	:hover {
+		color: ${props => props.theme.link};
+		filter: brightness(120%);
+	}
 	
 	:after {
         color: ${props => props.theme.background}
@@ -36,8 +43,9 @@ const Contact = styled.a `
 
 const Navigation = () => (
 	<Nav>
-		<Link to="/contact"><Contact href="" className="fancy">Contact</Contact></Link>
+		
 		<Link to="/"><Logo>chris.</Logo></Link>
+		<Link to="/contact"><Contact href="" className="fancy">Contact</Contact></Link>
 
   	</Nav>
 );
