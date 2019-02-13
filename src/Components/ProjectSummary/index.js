@@ -20,7 +20,7 @@ class ProjectSummary extends Component {
         return (
             <Container className="container">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-6 col-sm-10 offset-sm-1 offset-md-0">
                         <ProjectLogo className="col-6 ">
                             <img src={this.props.projectLogo} className="img-fluid"/>
                         </ProjectLogo>

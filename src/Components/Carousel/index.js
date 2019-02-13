@@ -36,7 +36,7 @@ const ProjectLink = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    right: 0;
+    right: 30px;
   }
 `
 const PartialLine = styled.div`
@@ -122,10 +122,10 @@ class Carousel extends React.Component {
     return (
       <Container>
         <ProjectLink>
-            <Button buttonText="View project" onClick={slides[this.state.currentSlide]}/>
+            <Button buttonText="View case study" onClick={slides[this.state.currentSlide]}/>
         </ProjectLink>
       
-        <ProjectsHeader className="col-md-10 col-lg-8 offset-md-1">Projects
+        <ProjectsHeader className="col-md-10 col-lg-8 offset-md-1">Case studies
           <PartialLine />
         </ProjectsHeader>
         

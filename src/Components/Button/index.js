@@ -18,10 +18,14 @@ const ButtonUI = styled.button`
     border-radius: 4px;
     box-shadow: 2px 2px 0px 0px ${props => props.theme.link};
 
-    :after {
+    :hover {
         color: ${props => props.theme.link} !important;
-        filter: brightness(150%;)
-        margin-top: -10px;
+        margin: -1px 1px 0 0;
+        box-shadow: 5px 5px 0px 0px ${props => props.theme.link};
+    }
+
+    :focus {
+        outline: 0;
     }
 `
 

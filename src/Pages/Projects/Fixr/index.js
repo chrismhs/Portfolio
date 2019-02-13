@@ -16,6 +16,10 @@ const Container = styled.div`
 const AnchorContainer = styled.div`
     display: inline-block;
     margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 0;
+    }
 `
 
 const Anchor = styled.a`
@@ -43,7 +47,7 @@ class Triptease extends Component {
                         synopsis="A door managament solution built for speed. Built on iOS and Android for both mobile and tablet devices, it aims to be the most efficient ticket scanner in the market, scanning up to 2,000 tickets an hour."
                         mainImg={img1}
                     ></ProjectSummary>
-                    <AnchorContainer>
+                    <AnchorContainer className="offset-sm-1 offset-md-0">
                         <Anchor className="fancy">Challenges & opportunities</Anchor>
                         <Anchor className="fancy">The users</Anchor>
                         <Anchor className="fancy">Design process</Anchor>
