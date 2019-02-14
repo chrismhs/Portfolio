@@ -19,6 +19,7 @@ const Body = styled.div`
   background-color: ${props => props.theme.background };
   color: ${props => props.theme.foreground};
   transition: 0.5s linear;
+  height : 100vh; 
 `
 
 class App extends Component {
