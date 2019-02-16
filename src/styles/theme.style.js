@@ -1,7 +1,7 @@
 export default {
-    primary: {background: '#0A0325', foreground: '#FFFFFF'},
-    one: {background: '#F6F6F6', foreground: '#1B1E27', link: '#5E43C2',},
-    two: {background: '#211152', foreground: 'white', link: '#FF2C00',},
-    three: {background: '#1D1D1E', foreground: '#FFFFFF', link: '#D92407',},
-    four: {background: '#5FD1FF', foreground: '#044561', link: '#022433',},
-  };
+  primary: {background: '#0A0325', foreground: '#FFFFFF'},
+  one: {background: '246, 246, 246', foreground: '27, 30, 39', link: '94, 67, 194',},
+  two: {background: '33, 17, 82', foreground: '255, 255, 255', link: '255, 44, 0',},
+  three: {background: '29, 29, 30', foreground: '255, 255, 255', link: '217, 36, 7',},
+  four: {background: '95, 209, 255', foreground: '4, 69, 97', link: '2, 36, 51',},
+};

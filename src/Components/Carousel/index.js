@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Slider from "react-slick";
 import styled, { withTheme } from "styled-components"
 import Slide from '../Slide';
@@ -42,7 +41,7 @@ const ProjectLink = styled.div`
 const PartialLine = styled.div`
   width: 120px;
   height: 4px;
-  background-color: ${props => props.theme.foreground};
+  background-color: rgb(${props => props.theme.foreground});
   margin-top: 5px;
   transition: 0.5s linear;
 `

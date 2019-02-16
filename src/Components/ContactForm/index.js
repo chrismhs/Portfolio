@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled, { withTheme } from "styled-components";
+import { Formik, Form, Field, ErrorMessage  } from 'formik';
 
-import Input from '../Input';
-
-const SubmitButton = styled.input`
+const SubmitButton = styled.button`
     height: 44px;
-    background-color: ${props => props.theme.background};
-    color: ${props => props.theme.link} !important;
+    background-color: rgb(${props => props.theme.background});
+    color: rgb(${props => props.theme.link}) !important;
     filter: brightness(120%);
     padding: 12px 15px;
     border: 0;
@@ -17,25 +16,40 @@ const SubmitButton = styled.input`
     font-family: 'HKGrotesk', Roboto, sans-serif;
     font-weight: 700;
     border-radius: 4px;
-    box-shadow: 2px 2px 0px 0px ${props => props.theme.link};
+    box-shadow: 2px 2px 0px 0px rgb(${props => props.theme.link});
 
     :hover {
-        color: ${props => props.theme.link} !important;
+        color: rgb(${props => props.theme.link}) !important;
         margin: -1px 1px 0 0;
-        box-shadow: 5px 5px 0px 0px ${props => props.theme.link};
+        box-shadow: 5px 5px 0px 0px rgb(${props => props.theme.link});
     }
 
     :focus {
         outline: 0;
     }
+
+    :disabled {
+        filter: grayscale(100%);
+    }
+`
+
+const StyledField = styled(Field)`
+    display: flex;
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    -webkit-appearance: none;
+    margin: 5px 0;
 `
 
 
 const InputLabel = styled.p`
-    margin: 5px 0;
+    margin: 25px 0 5px 0;
 `
 
-const InputArea = styled.textarea`
+const StyledInputArea = styled(Field)`
     margin: 5px 0 20px 0;
     padding: 10px;
     display: flex;
@@ -45,42 +59,65 @@ const InputArea = styled.textarea`
     -webkit-appearance: none;
 `
 
+const StyledErrorMessage = styled(ErrorMessage)`
+    color: red;
+    font-size: 12px;
+`
+
+const Wrapper = styled.div`
+margin-bottom: 100px
+`
+
 class ContactForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            realname: '',
-            email: '',
-            message: ''
-        };
-  
-        
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({ [event.target.name]: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
-      event.preventDefault();
-    }
+    
   
     render() {
+        var success = false;
         return (
-                <form className="d-flex flex-column" onSubmit={this.handleSubmit}>
-                    <label>
-                        <InputLabel>Name</InputLabel>
-                        <Input type="text" name="realname" onChange={this.handleChange} />
-                        <InputLabel>Email</InputLabel>
-                        <Input type="email" name="email" onChange={this.handleChange} />
-                        <InputLabel>Message</InputLabel>
-                        <InputArea rows="5"type="text"  name="message" onChange={this.handleChange} />
-                    </label>
-                    <SubmitButton type="submit" value="Submit"/>
-                </form>
+            <Wrapper>
+                <Formik
+                    initialValues={{ email: '', password: '' }}
+                    validate={values => {
+                        let errors = {};
+                        if (!values.email) {
+                        errors.email = 'Required';
+                        } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                        ) {
+                        errors.email = 'Invalid email address';
+                        }
+                        return errors;
+                    }}
+                    onSubmit={(values, { setSubmitting, setStatus }) => {
+                        setTimeout(() => {
+                        alert(JSON.stringify(values, null, 2));
+                        setSubmitting(false);
+						setStatus({ success: true });
+                        }, 400);
+                    }}
+                    >
+                    {({ isSubmitting }) => (
+                        <Form name="contact" method="post">
+                        <input type="hidden" name="form-name" value="contact" />
+                            <InputLabel>Name</InputLabel>
+                            <StyledField type="text" name="realname"  placeholder="Bill Gates"/>
+                            <InputLabel>Email</InputLabel>
+                            <StyledField type="email" name="email" placeholder="bill@gates.com"/>
+                            <StyledErrorMessage name="email" component="div" />
+                            <InputLabel>Message</InputLabel>
+                            <StyledInputArea component="textarea" rows="5" type="text" name="message" />
+                            <SubmitButton type="submit" disabled={isSubmitting}>
+                            Send message
+                            </SubmitButton>
+                            { (success === true) && 
+                                <div>
+                                    Stuff Here
+                                </div>
+                            }
+                        </Form>
+                    )}
+                </Formik>
+            </Wrapper>
         );
     }
 }

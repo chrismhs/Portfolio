@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
-import FadeIn from 'react-fade-in';
 
 import Logo from './Logo.png';
 import img1 from './AgentPortal-half.png';
@@ -23,14 +22,14 @@ const AnchorContainer = styled.div`
 `
 
 const Anchor = styled.a`
-    color: ${props => props.theme.link} !important;
+    color: rgb(${props => props.theme.link}) !important;
     margin-bottom: 5px;
     clear:both;
     float:left;
 
     :after {
-        color: ${props => props.theme.background}
-        background: ${props => props.theme.link}
+        color: rgb(${props => props.theme.background});
+        background: rgb(${props => props.theme.link})
     }
     
 `
@@ -41,7 +40,6 @@ class Triptease extends Component {
         return (
             
             <Container>
-                <FadeIn>
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="Agent Portal"
@@ -71,7 +69,6 @@ class Triptease extends Component {
                         {src:img2},
                     ]}
                 />
-            </FadeIn>
             </Container>
         )
     }
