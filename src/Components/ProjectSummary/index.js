@@ -14,6 +14,10 @@ const ProjectLogo = styled.div`
     padding: 30px 0;
 `
 
+const SectionHeader = styled.h3`
+    padding-bottom: 10px;
+`
+
 
 class ProjectSummary extends Component {
     render() {
@@ -24,7 +28,7 @@ class ProjectSummary extends Component {
                         <ProjectLogo className="col-6 ">
                             <img src={this.props.projectLogo} className="img-fluid"/>
                         </ProjectLogo>
-                        <h3>{this.props.projectName}</h3>
+                        <SectionHeader>{this.props.projectName}</SectionHeader>
                         <p>{this.props.synopsis}</p>
                     </div>
                     <div className="col-md-6">

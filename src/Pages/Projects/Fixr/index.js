@@ -6,7 +6,7 @@ import img1 from './fixr-main-image.png';
 import img2 from './scanning.jpg';
 
 import ProjectSummary from '../../../Components/ProjectSummary'
-import TextSection from '../../../Components/TextSection';
+import TextSection from '../../../Components/TextSections/TextSection';
 import ContentImages from '../../../Components/Images/ContentImages';
 
 const Container = styled.div`
@@ -42,7 +42,7 @@ class Triptease extends Component {
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="Entry Manager"
-                    synopsis="A door managament solution built for speed. Built on iOS and Android for both mobile and tablet devices, it aims to be the most efficient ticket scanner in the market, scanning up to 2,000 tickets an hour."
+                    synopsis="A door management solution built for speed. Built on iOS and Android for both mobile and tablet devices, it aims to be the most efficient ticket scanner in the market, scanning up to 2,000 tickets an hour."
                     mainImg={img1}
                 ></ProjectSummary>
                 <AnchorContainer className="offset-sm-1 offset-md-0">

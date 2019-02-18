@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
 const Container = styled.div`
-    padding: 80px 0 30px 0;
+    padding: 30px 0 30px 0;
+`
+
+const SectionHeader = styled.h3`
+    padding-bottom: 10px;
 `
 
 class TextSection extends Component {
@@ -11,7 +15,7 @@ class TextSection extends Component {
             <Container className="container">
                 <div className="row">
                     <div className="col-sm-10 col-lg-8 col-xl-6 offset-sm-1 offset-lg-2 offset-xl-3">
-                        <h3>{this.props.sectionHeader}</h3>
+                        <SectionHeader>{this.props.sectionHeader}</SectionHeader>
                         {this.props.sectionParagraph.map((paragraph,i) => {
                             return(
                                 <p key={i}>{paragraph}</p>

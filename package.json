@@ -13,7 +13,7 @@
     "react-router-scroll-top": "^0.1.1",
     "react-scripts": "^2.1.5",
     "react-slick": "^0.23.2",
-    "react-transition-group": "^1.2.1",
+    "react-transition-group": "^2.5.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.1.3"
   },

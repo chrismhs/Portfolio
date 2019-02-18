@@ -1,7 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Redirect, Switch } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { BrowserRouter as Router} from "react-router-dom";
 
 import styled, { ThemeProvider } from "styled-components";
 import ScrollToTop from 'react-router-scroll-top'
@@ -9,10 +8,8 @@ import ScrollToTop from 'react-router-scroll-top'
 import theme from './styles/theme.style';
 
 import Navigation from './Components/Navigation'
-import Home from './Pages/Home'
-import Contact from './Pages/Contact'
-import Triptease from './Pages/Projects/Triptease'
-import Fixr from './Pages/Projects/Fixr'
+import Container from './Components/Container'
+import Footer from './Components/Footer'
 
 const Body = styled.div`
   background-color: rgb(${props => props.theme.background });
@@ -30,7 +27,6 @@ class App extends Component {
     this.setState({theme})
   }
   
-
   render() {
     return (
       <Router>
@@ -41,22 +37,8 @@ class App extends Component {
               <header className="App-header">
                 <Navigation />
               </header>
-              <div className="container">
-                <TransitionGroup>
-                  {/* <CSSTransition
-                      key={window.location.key}
-                      timeout={{ enter: 300, exit: 300 }}
-                      classNames={'fade'}
-                  > */}
-                    <Switch location={window.location}>
-                      <Route exact path="/" render={() => <Home changeThemeColor={this.changeThemeColor}></Home>} />
-                      <Route exact path="/contact" component={Contact} />
-                      <Route exact path="/projects/triptease" component={Triptease} />
-                      <Route exact path="/projects/fixr" component={Fixr} />
-                    </Switch>
-                  {/* </CSSTransition> */}
-                </TransitionGroup>
-              </div>
+              <Container changeThemeColor={this.changeThemeColor}/>
+              <Footer />
             </div>
           </Body>
         </ThemeProvider>

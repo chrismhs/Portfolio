@@ -5,7 +5,6 @@ import styled, { withTheme } from 'styled-components';
 const Nav = styled.div `
 	z-index: 1001;
 	text-align: center;
-	padding-bottom: 60px;
 	position: fixed;
 	width: 100%;
 `
