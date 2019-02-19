@@ -77,6 +77,13 @@ h3 {
   font-size: 20px;
 }
 
+h4 {
+  font-family: 'HKGrotesk', Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -148,7 +155,11 @@ a.fancy:hover::after{
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
   }
 
 }
@@ -165,7 +176,11 @@ a.fancy:hover::after{
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
   }
 }
 
@@ -180,7 +195,11 @@ a.fancy:hover::after{
     }
 
     h3 {
-      font-size: 32px;
+      font-size: 36px;
+    }
+
+    h4 {
+      font-size: 28px;
     }
 }
 

@@ -13,7 +13,6 @@ const FooterRow = styled.div`
 const SocialLink = styled.a`
     padding: 10px;
     color: rgb(${props => props.theme.link});
-	margin-right: 30px;
 
 	:hover {
 		color: rgb(${props => props.theme.link});

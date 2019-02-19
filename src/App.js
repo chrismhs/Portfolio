@@ -19,8 +19,11 @@ const Body = styled.div`
 `
 
 class App extends Component {
-  state = {
-    theme: theme.one
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: theme.one,
+    }
   }
   
   changeThemeColor = (theme) =>{
@@ -35,7 +38,7 @@ class App extends Component {
           <Body>
             <div className="App">
               <header className="App-header">
-                <Navigation />
+                <Navigation scrolling={this.scrolling} />
               </header>
               <Container changeThemeColor={this.changeThemeColor}/>
               <Footer />

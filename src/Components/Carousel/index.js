@@ -65,26 +65,41 @@ const SliderArrowLeft = styled(SliderArrow)`
   margin-left: 50px;
 `
 
+const Polygon = styled.polygon`
+  fill: rgb(${props => props.theme.link});
+  transition: 0.5s linear;
+  
+`
+
+const ArrowWrapper = styled.svg`
+  height: 34px !important
+  width: 21px !important
+  margin-right: 60px;
+  -webkit-filter: drop-shadow( 3px 3px 1px rgba(0, 0, 0, .5));
+  filter: drop-shadow( 2px 2px 1px rgba(0, 0, 0, .5));
+`
+
+const ArrowWrapperLeft = styled(ArrowWrapper)`
+  margin-left: 60px;
+  z-index: 1000;
+`
+
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <SliderArrow src={sliderarrow}
-      className={className}
-      style={{ ...style}}
-      onClick={onClick}
-    />
+    <ArrowWrapper height="34" width="21"  className={className} style={{ ...style}} onClick={onClick}>
+      <Polygon className="prev" points="0,4 13,17 0,30 4,34 21,17 4,0"/>
+    </ArrowWrapper>
   );
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const {className, style, onClick} = props
   return (
-    <SliderArrowLeft left src={sliderarrow}
-      className={className}
-      style={{ ...style}}
-      onClick={onClick}
-    />
+    <ArrowWrapperLeft height="34" width="21"  className={className} style={{ ...style}} onClick={onClick}>
+    <Polygon className="prev" points="21,4 8,17 21,30 17,34 0,17 17,0"/>
+  </ArrowWrapperLeft>
   );
 }
 
@@ -120,6 +135,7 @@ class Carousel extends React.Component {
     };
     return (
       <Container>
+        
         <ProjectLink>
             <Button buttonText="View case study" onClick={slides[this.state.currentSlide]}/>
         </ProjectLink>
