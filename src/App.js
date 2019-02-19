@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router, HashRouter} from "react-router-dom";
 
 import styled, { ThemeProvider } from "styled-components";
 import ScrollToTop from 'react-router-scroll-top'
@@ -32,7 +32,7 @@ class App extends Component {
   
   render() {
     return (
-      <Router>
+      <HashRouter>
         <ScrollToTop>
         <ThemeProvider theme={this.state.theme}>
           <Body>
@@ -46,7 +46,7 @@ class App extends Component {
           </Body>
         </ThemeProvider>
         </ScrollToTop>
-      </Router>
+      </HashRouter>
     );
   }
 }

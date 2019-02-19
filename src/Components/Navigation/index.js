@@ -54,8 +54,8 @@ const LogoClip = styled.div `
 `;
 
 const clips = {
-	notScrolled: "polygon(0px 0px, 24px 0px, 98px 0px, 135px 0px, 140px 0px);",
-	scrolled: "polygon(0px 0px, 24px 42px, 98px 60px, 135px 35px, 140px 0px);"
+	notScrolled: "polygon(15px 0px, 34px 0px, 98px 0px, 115px 0px, 120px 0px);",
+	scrolled: "polygon(0px 0px, 24px 42px, 98px 60px, 130px 35px, 140px 0px);"
 }
 
 LogoClip.defaultProps = {
