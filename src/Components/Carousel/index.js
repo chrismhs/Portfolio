@@ -46,25 +46,6 @@ const PartialLine = styled.div`
   transition: 0.5s linear;
 `
 
-const SliderArrow = styled.img`
-  display: ;
-  height: 30px;
-  width: 20px;
-  margin-right: 50px;
-  z-index: 1000;
-  color: #000000;
-  fill: currentColor;
-  border: 1px;
-
-`
-
-const SliderArrowLeft = styled(SliderArrow)`
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  margin-top: -15px;
-  margin-left: 50px;
-`
-
 const Polygon = styled.polygon`
   fill: rgb(${props => props.theme.link});
   transition: 0.5s linear;
@@ -77,11 +58,19 @@ const ArrowWrapper = styled.svg`
   margin-right: 60px;
   -webkit-filter: drop-shadow( 3px 3px 1px rgba(0, 0, 0, .5));
   filter: drop-shadow( 2px 2px 1px rgba(0, 0, 0, .5));
+
+  @media (max-width: 768px) {
+      margin-right: 40px;
+  }
 `
 
 const ArrowWrapperLeft = styled(ArrowWrapper)`
   margin-left: 60px;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    margin-left: 40px;
+  }
 `
 
 

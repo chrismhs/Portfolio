@@ -14,8 +14,6 @@ const NavContainer = styled.div `
 	padding-bottom: 10px;
 	position: relative;
 	width: 100%;
-	// box-shadow: 0px 0px 30px 40px rgba(${props => props.theme.background},1);
-	// background: rgba(${props => props.theme.background}, 1);
 	transition: 0.5s linear;
 `
 
@@ -38,7 +36,6 @@ const Logo = styled.div `
 `;
 
 const LogoClip = styled.div `
-	// display: inherit;
 	color: rgb(${props => props.theme.background}) !important;
 	background-color: rgb(${props => props.theme.foreground});
 	text-align: center;
@@ -48,7 +45,6 @@ const LogoClip = styled.div `
 	line-height: normal;
 	font-size: 24px;
 	padding: 12px 0 0 0;
-	// left: 50%;
 	position: absolute;
 	transition: 0.5s ease;
 	width: 150px;
@@ -103,13 +99,13 @@ class Navigation extends React.Component {
 	}
 	
 	handleScroll() {
-		if (window.scrollY > 100) {
+		if (window.scrollY > 50) {
 		  console.log("should lock");
 		  this.setState({
 				scrolling: true,
 				clip: clips.scrolled,
 		  });
-		} else if (window.scrollY < 100) {
+		} else if (window.scrollY < 50) {
 		  console.log("not locked" );
 		  this.setState({
 				scrolling: false,
