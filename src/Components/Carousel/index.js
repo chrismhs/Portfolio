@@ -17,8 +17,12 @@ const Container = styled.div`
 `
 const SliderWrapper = styled.div`
   border-radius: 15px;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);  
-  height: 500px;
+  // box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);  
+  height: 600px;
+
+  @media (min-height: 700px) {
+    height: 700px;
+  }
 
 `
 const ProjectsHeader = styled.h2`
@@ -37,13 +41,6 @@ const ProjectLink = styled.div`
   @media (max-width: 768px) {
     right: 30px;
   }
-`
-const PartialLine = styled.div`
-  width: 120px;
-  height: 4px;
-  background-color: rgb(${props => props.theme.foreground});
-  margin-top: 5px;
-  transition: 0.5s linear;
 `
 
 const Polygon = styled.polygon`
@@ -130,7 +127,6 @@ class Carousel extends React.Component {
         </ProjectLink>
       
         <ProjectsHeader className="col-md-10 col-lg-8 offset-md-1">Case studies
-          <PartialLine />
         </ProjectsHeader>
         
         <SliderWrapper>
