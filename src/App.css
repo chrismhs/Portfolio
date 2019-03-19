@@ -37,6 +37,7 @@
   transition: opacity 300ms ease-in;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -183,7 +184,7 @@ a.fancy:hover::after{
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   h3 {
@@ -206,7 +207,7 @@ a.fancy:hover::after{
     }
 
     h2 {
-      font-size: 48px;
+      font-size: 44px;
     }
 
     h3 {

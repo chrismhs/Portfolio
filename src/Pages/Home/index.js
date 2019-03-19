@@ -3,6 +3,7 @@ import styled, { withTheme } from "styled-components";
 
 import Biography from '../../Components/Bio'
 import Carousel from '../../Components/Carousel'
+import CaseStudies from '../../Components/CaseStudies'
 import NewsFeed from '../../Components/NewsFeed'
 
 const Container = styled.div`
@@ -14,10 +15,11 @@ class Home extends Component {
         return (
             <Container>
                 <Biography />
-                <Carousel
+                <CaseStudies />
+                {/* <Carousel
                     currentTheme={this.props.theme}
                     changeThemeColor={this.props.changeThemeColor}
-                />
+                /> */}
                 <NewsFeed />
             </Container>
         )
