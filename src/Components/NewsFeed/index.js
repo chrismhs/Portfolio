@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components"
 
 import Article from './Article'
+import Link from "../Link"
 
 const SectionHeader = styled.div`
 margin-bottom: 30px;
@@ -14,7 +15,7 @@ class NewsFeed extends Component {
                 <div className="row">
                     <SectionHeader className="col-md-8 col-lg-6 offset-md-1">
                         <h2>Writings</h2>
-                        <p>I realise that time doesn't favour tech articles, so I doubt that my list of available articles will reach above a handful but hopefully those few will be relevant. All created and held <a href="https://medium.com/@chrismhs/latest" target="black">on medium</a>.</p>
+                        <p>I realise that time doesn't favour tech articles, so I doubt that my list of available articles will reach above a handful but hopefully those few will be relevant. All created and held <Link href="https://medium.com/@chrismhs/latest" target="black">on medium</Link>.</p>
                     </SectionHeader>
                     <div className="col-md-6" >
                         <Article

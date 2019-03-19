@@ -25,14 +25,16 @@ class CaseStudies extends Component {
                     title={'Augmented A.I. Chat'}
                     body={'Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.'}
                     logo={LogoTriptease}
+                    logoWidth={"200px"}
                     mainImage={MainImageTriptease}
                     projectLink={"/projects/triptease"}
                 />
-                <CaseStudyRight
+                <CaseStudyLeft
                     projectTheme={theme.two}
                     title={'Ticketing millenials'}
                     body={'Building a best-in-class door scanner for educational institutes and student societies that fits into their fast-paced and low-cost lifestyles.'}
                     logo={LogoFixr}
+                    logoWidth={"150px"}
                     mainImage={MainImageFixr}
                     projectLink={"/projects/fixr"}
                 />

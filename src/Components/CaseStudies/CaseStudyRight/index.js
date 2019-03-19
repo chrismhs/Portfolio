@@ -13,13 +13,13 @@ const CaseStudyContainer = styled.div`
     margin-bottom: 50px;
 `
 
-const ProjectImage = styled.div`
-    margin-top:-50px;
+const ProjectImage = styled.img`
+    max-height: 600px;
 `
 const ProjectLogo = styled.div`
     height: auto;
     padding: 100px 0 40px 0;
-    width: 200px;
+    width: ${props => props.logoWidth};
 `
 
 const ProjectLink =  styled(Link)`
@@ -42,13 +42,11 @@ class CaseStudyRight extends Component {
             <div>
                 <CaseStudyContainer projectTheme={this.props.projectTheme}>
                     <div className="row">
-                        <div className="col-10 col-lg-5">
-                            <ProjectImage>
-                            <img src={this.props.mainImage} className="img-fluid"/>
-                            </ProjectImage>
+                        <div className="col-10 col-lg-5 offset-1">
+                            <ProjectImage src={this.props.mainImage} className="img-fluid"/>
                         </div>
-                        <div className="col-5 offset-1">
-                            <ProjectLogo>
+                        <div className="col-6">
+                            <ProjectLogo logoWidth={this.props.logoWidth}>
                                 <img src={this.props.logo} className="img-fluid"/>
                             </ProjectLogo>
                             <h2>{this.props.title}</h2>

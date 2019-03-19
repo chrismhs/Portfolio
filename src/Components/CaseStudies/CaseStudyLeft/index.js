@@ -10,15 +10,23 @@ const CaseStudyContainer = styled.div`
     height: 600px;
     border-radius: 20px;
     margin-bottom: 50px;
+
+    @media (max-width: 992px) {
+        height: 450px;
+      }
 `
 
-const ProjectImage = styled.div`
-
+const ProjectImage = styled.img`
+    max-height: 600px;
 `
 const ProjectLogo = styled.div`
     height: auto;
     padding: 100px 0 40px 0;
-    width: 200px;
+    width: ${props => props.logoWidth};
+
+    @media (max-width: 992px) {
+        padding: 40px 0 40px 0;
+      }
 `
 
 const ProjectLink =  styled(Link)`
@@ -42,7 +50,7 @@ class CaseStudyLeft extends Component {
                 <CaseStudyContainer projectTheme={this.props.projectTheme}>
                     <div className="row">
                         <div className="col-10 col-lg-5 offset-1">
-                        <ProjectLogo>
+                        <ProjectLogo logoWidth={this.props.logoWidth}>
                                 <img src={this.props.logo} className="img-fluid"/>
                             </ProjectLogo>
                             <h2>{this.props.title}</h2>
@@ -50,9 +58,7 @@ class CaseStudyLeft extends Component {
                             <ProjectLink projectTheme={this.props.projectTheme} to={this.props.projectLink} href="" className="fancy">View case study</ProjectLink>
                         </div>
                         <div className="col-6">
-                            <ProjectImage>
-                            <img src={this.props.mainImage} className="img-fluid"/>
-                            </ProjectImage>
+                            <ProjectImage src={this.props.mainImage} className="img-fluid d-none d-lg-block"/>
                         </div>
                     </div>
                 </CaseStudyContainer>
