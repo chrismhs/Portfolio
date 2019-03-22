@@ -11,14 +11,14 @@ import Fixr from '../../Pages/Projects/Fixr'
 function Container({ changeThemeColor }) {
     return (
         <div className="container">
-            <Route render={(location) => (
+            <Route render={({ location }) => (
                 <TransitionGroup>
                     <CSSTransition
                         key={location.key}
                         timeout={300}
                         classNames="fade"
                     >
-                        <Switch>
+                        <Switch location={location}>
                             <Route exact path="/" render={() => <Home changeThemeColor={changeThemeColor} />} />
                             <Route path="/contact" component={Contact} />
                             <Route path="/projects/triptease" component={Triptease} />
