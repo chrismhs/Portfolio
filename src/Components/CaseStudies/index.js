@@ -21,7 +21,8 @@ class CaseStudies extends Component {
         return (
             <CaseStudyContainer>
                 <CaseStudyLeft
-                    projectTheme={theme.one}
+                    changeThemeColor={this.props.changeThemeColor}
+                    projecttheme={theme.one}
                     title={'Augmented A.I. Chat'}
                     body={'Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.'}
                     logo={LogoTriptease}
@@ -30,7 +31,8 @@ class CaseStudies extends Component {
                     projectLink={"/projects/triptease"}
                 />
                 <CaseStudyLeft
-                    projectTheme={theme.two}
+                    changeThemeColor={this.props.changeThemeColor}
+                    projecttheme={theme.two}
                     title={'Ticketing millenials'}
                     body={'Building a best-in-class door scanner for educational institutes and student societies that fits into their fast-paced and low-cost lifestyles.'}
                     logo={LogoFixr}

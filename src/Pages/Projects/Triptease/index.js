@@ -37,12 +37,10 @@ const Anchor = styled.a`
     
 `
 
-
 class Triptease extends Component {
     render() {
         return (
-            
-            <Container>
+            <Container className="page">
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="A.I. Augmented Chat"

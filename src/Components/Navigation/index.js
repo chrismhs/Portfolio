@@ -100,13 +100,11 @@ class Navigation extends React.Component {
 	
 	handleScroll() {
 		if (window.scrollY > 50) {
-		  console.log("should lock");
 		  this.setState({
 				scrolling: true,
 				clip: clips.scrolled,
 		  });
 		} else if (window.scrollY < 50) {
-		  console.log("not locked" );
 		  this.setState({
 				scrolling: false,
 				clip: clips.notScrolled,

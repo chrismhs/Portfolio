@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
+import theme from '../../../styles/theme.style';
+
 import Logo from './box-logo-red.png';
 import img1 from './fixr-main-image.png';
 import img2 from './scanning.jpg';
@@ -35,10 +37,10 @@ const Anchor = styled.a`
 `
 
 
-class Triptease extends Component {
+class Triptease extends Component {   
     render() {
         return (
-            <Container>
+            <Container className="page">
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="Entry Manager"

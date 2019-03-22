@@ -34,17 +34,17 @@ class App extends Component {
     return (
       <HashRouter>
         <ScrollToTop>
-        <ThemeProvider theme={this.state.theme}>
-          <Body>
-            <div className="App">
-              <header className="App-header">
-                <Navigation scrolling={this.scrolling} />
-              </header>
-              <Container changeThemeColor={this.changeThemeColor}/>
-              <Footer />
-            </div>
-          </Body>
-        </ThemeProvider>
+          <ThemeProvider theme={this.state.theme}>
+            <Body>
+              <div className="App">
+                <header className="App-header">
+                  <Navigation scrolling={this.scrolling} />
+                </header>
+                <Container changeThemeColor={this.changeThemeColor}/>
+                <Footer />
+              </div>
+            </Body>
+          </ThemeProvider>
         </ScrollToTop>
       </HashRouter>
     );

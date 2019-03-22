@@ -8,23 +8,25 @@ import Triptease from '../../Pages/Projects/Triptease'
 import Fixr from '../../Pages/Projects/Fixr'
 
 
-function Container({ location, changeThemeColor }) {
+function Container({ changeThemeColor }) {
     return (
         <div className="container">
-            <TransitionGroup>
-                <CSSTransition
-                    key={location.key}
-                    timeout={{ enter: 300, exit: 300 }}
-                    classNames={'fade'}
-                >
-                <Switch location={location}>
-                    <Route exact path="/" render={() => <Home changeThemeColor={changeThemeColor}></Home>} />
-                    <Route exact path="/contact" component={Contact} />
-                    <Route exact path="/projects/triptease" component={Triptease} />
-                    <Route exact path="/projects/fixr" component={Fixr} />
-                </Switch>
-                </CSSTransition>
-            </TransitionGroup>
+            <Route render={(location) => (
+                <TransitionGroup>
+                    <CSSTransition
+                        key={location.key}
+                        timeout={300}
+                        classNames="fade"
+                    >
+                        <Switch>
+                            <Route exact path="/" render={() => <Home changeThemeColor={changeThemeColor} />} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/projects/triptease" component={Triptease} />
+                            <Route path="/projects/fixr" component={Fixr} />
+                        </Switch>
+                    </CSSTransition>
+                </TransitionGroup> 
+            )} />
         </div>
     );
 }
