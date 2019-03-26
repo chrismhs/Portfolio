@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
+import ProgressiveImage from 'react-progressive-image';
+import inline from 'react-progressive-image';
+
+const imageStyle = {
+    height: '100vh',
+};
 
 const Container = styled.div`
     padding: 30px 0 30px 0;
@@ -14,7 +20,22 @@ class SingleImage extends Component {
             <Container className="container">
                 <div className="row">
                     <ContentImage className="col-lg-8 offset-lg-2">
-                        <img src={this.props.imagesrc} className="img-fluid"/>
+                        <ProgressiveImage
+                            src={this.props.imagesrc}
+                            placeholder={inline}
+                            className="img-fluid"
+                            placeholder={this.props.placeImageSrc}
+                        >
+                            {(image, srcSetData) => {
+                                return (
+                                <img
+                                    style={imageStyle}
+                                    src={image}
+                                    sizes={srcSetData.sizes}
+                                />
+                                );
+                            }}
+                        </ProgressiveImage>
                     </ContentImage>
                 </div>
             </Container>

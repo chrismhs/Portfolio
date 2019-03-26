@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import styled, { withTheme } from "styled-components"
 
 import CaseStudyLeft from './CaseStudyLeft'
-import CaseStudyRight from './CaseStudyRight'
 
 import theme from '../../styles/theme.style';
 
 import LogoTriptease from '../../Pages/Projects/Triptease/Logo.png';
 import MainImageTriptease from '../../Pages/Projects/Triptease/AgentPortal-half.png';
+import PlaceMainImageTriptease from '../../Pages/Projects/Triptease/Placeholder-agentportal-half.png';
 import LogoFixr from '../../Pages/Projects/Fixr/box-logo-red.png';
 import MainImageFixr from '../../Pages/Projects/Fixr/fixr-main-image.png';
+import PlaceMainImageFixr from '../../Pages/Projects/Fixr/Placeholder-fixr-main-image.png';
 
 const CaseStudyContainer = styled.div `
     margin-bottom: 100px;
@@ -28,6 +29,7 @@ class CaseStudies extends Component {
                     logo={LogoTriptease}
                     logoWidth={"200px"}
                     mainImage={MainImageTriptease}
+                    placeMainImage={PlaceMainImageTriptease}
                     projectLink={"/projects/triptease"}
                 />
                 <CaseStudyLeft
@@ -38,6 +40,7 @@ class CaseStudies extends Component {
                     logo={LogoFixr}
                     logoWidth={"150px"}
                     mainImage={MainImageFixr}
+                    placeMainImage={PlaceMainImageFixr}
                     projectLink={"/projects/fixr"}
                 />
             </CaseStudyContainer>

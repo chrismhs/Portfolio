@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components"
+import ProgressiveImage from 'react-progressive-image';
 
 import theme from '../../../styles/theme.style';
 
@@ -15,10 +16,11 @@ const CaseStudyContainer = styled.div`
         height: 450px;
       }
 `
+const imageStyle = {
+    maxHeight: '600px',
+    minWidth: '100%'
+};
 
-const ProjectImage = styled.img`
-    max-height: 600px;
-`
 const ProjectLogo = styled.div`
     height: auto;
     padding: 100px 0 40px 0;
@@ -58,7 +60,21 @@ class CaseStudyLeft extends Component {
                             <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="" className="fancy">View case study</ProjectLink>
                         </div>
                         <div className="col-6">
-                            <ProjectImage src={this.props.mainImage} className="img-fluid d-none d-lg-block"/>
+                            <ProgressiveImage
+                                src={this.props.mainImage}
+                                className="img-fluid d-none d-lg-block"
+                                placeholder={this.props.placeMainImage}
+                            >
+                            {(image, srcSetData) => {
+                                return (
+                                <img
+                                    style={imageStyle}
+                                    src={image}
+                                    sizes={srcSetData.sizes}
+                                />
+                                );
+                            }}
+                            </ProgressiveImage>
                         </div>
                     </div>
                 </CaseStudyContainer>

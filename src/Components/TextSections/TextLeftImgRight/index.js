@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
+import ProgressiveImage from 'react-progressive-image';
+import inline from 'react-progressive-image';
+
 const Container = styled.div`
     padding: 30px 0 80px 0;
 `
@@ -8,6 +11,11 @@ const Container = styled.div`
 const SectionHeader = styled.h3`
     padding-bottom: 10px;
 `
+
+const imageStyle = {
+    height: '100vh',
+};
+
 
 class TextSection extends Component {
     render() {
@@ -22,9 +30,22 @@ class TextSection extends Component {
                             )
                         })}
                     </div>
-                    <div className="col-md-6 col-lg-5 col-xl-4 offset-xl-1">
-                        <img src={this.props.imagesrc} className="img-fluid"/>
-                    </div>
+                    <ProgressiveImage
+                        src={this.props.imagesrc}
+                        placeholder={inline}
+                        className="img-fluid"
+                        placeholder={this.props.placeImageSrc}
+                    >
+                        {(image, srcSetData) => {
+                            return (
+                            <img
+                                style={imageStyle}
+                                src={image}
+                                sizes={srcSetData.sizes}
+                            />
+                            );
+                        }}
+                    </ProgressiveImage>
                 </div>
             </Container>
         )

@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, HashRouter} from "react-router-dom";
+import { HashRouter} from "react-router-dom";
 
 import styled, { ThemeProvider } from "styled-components";
 import ScrollToTop from 'react-router-scroll-top'
