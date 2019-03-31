@@ -18,21 +18,17 @@ const NavContainer = styled.div `
 `
 
 const Logo = styled.div `
-	// display: inherit;
 	color: rgb(${props => props.theme.foreground}) !important;
-	// text-align: center;
 	font-family: 'TiemposHeadline', serif;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
 	font-size: 24px;
 	padding: 12px 0 0 0;
-	// left: 50%;
-    margin-left: -32px;
+  margin-left: -40px;
 	position: absolute;
 	transition: 0.5s ease;
 	width: 150px;
-	// margin-left: -75px;
 `;
 
 const LogoClip = styled.div `
@@ -48,7 +44,7 @@ const LogoClip = styled.div `
 	position: absolute;
 	transition: 0.5s ease;
 	width: 150px;
-	margin-left: -32px;
+	margin-left: -40px;
 	clip-path: ${props => props.clip};
 	height: 60px;
 `;
@@ -64,9 +60,13 @@ LogoClip.defaultProps = {
 
 const Contact = styled(Link) `
 	float: right;
-	margin-top: 14px;
+	margin-top: 12px;
 	color: rgb(${props => props.theme.link});
+	background-color: rgb(${props => props.theme.background});
 	margin-right: 30px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	height: 36px;
 
 	:hover {
 		color: rgb(${props => props.theme.link});
@@ -120,7 +120,7 @@ class Navigation extends React.Component {
 						<Logo>chris.</Logo>
 						<LogoClip clip={this.state.clip}>chris.</LogoClip>
 					</Link>
-					<Contact to="/contact" href="" className="fancy">Contact</Contact>
+					<Contact to="/contact" href="">Contact</Contact>
 				</NavContainer>
 
 			</Nav>

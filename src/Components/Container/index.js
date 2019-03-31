@@ -11,12 +11,12 @@ function Container({ changeThemeColor }) {
     return (
         <div className="container">
             <Route render={({ location }) => (
-                        <Switch>
-                            <Route exact path="/" render={() => <Home changeThemeColor={changeThemeColor} />} />
-                            <Route path="/contact" component={Contact} />
-                            <Route path="/projects/triptease" component={Triptease} />
-                            <Route path="/projects/fixr" component={Fixr} />
-                        </Switch>
+                <Switch>
+                    <Route exact path="/" render={() => <Home changeThemeColor={changeThemeColor} />} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/projects/triptease" render={() => <Triptease changeThemeColor={changeThemeColor} />} />
+                    <Route path="/projects/fixr" render={() => <Fixr changeThemeColor={changeThemeColor} />} />
+                </Switch>
             )} />
         </div>
     );

@@ -6,7 +6,7 @@ const SubmitButton = styled.button`
     height: 44px;
     background-color: rgb(${props => props.theme.link});
     color: rgb(${props => props.theme.background}) !important;
-    padding: 12px 15px;
+    padding: 11px 15px 13px 15px;
     border: 0;
     display: block;
     cursor: pointer;
@@ -15,12 +15,9 @@ const SubmitButton = styled.button`
     font-family: 'HKGrotesk', Roboto, sans-serif;
     font-weight: 700;
     border-radius: 4px;
-    box-shadow: 2px 2px 0px 0px rgb(${props => props.theme.background});
 
     :hover {
         color: rgb(${props => props.theme.background}) !important;
-        margin: -1px 1px 1px 0;
-        box-shadow: 5px 5px 0px 0px rgb(${props => props.theme.foreground});
         filter: brightness(120%);
     }
 
@@ -42,6 +39,9 @@ const StyledField = styled(Field)`
     border: none;
     -webkit-appearance: none;
     margin: 5px 0;
+    color: rgb(${props => props.theme.foreground});
+    background-color: rgba(${props => props.theme.foreground}, 0.05);
+
 `
 
 
@@ -57,6 +57,8 @@ const StyledInputArea = styled(Field)`
     border-radius: 5px;
     border: none;
     -webkit-appearance: none;
+    color: rgb(${props => props.theme.foreground});
+    background-color: rgba(${props => props.theme.foreground}, 0.05);
 `
 
 const StyledErrorMessage = styled(ErrorMessage)`
@@ -69,12 +71,12 @@ margin-bottom: 100px
 `
 
 class ContactForm extends React.Component {
-    
   
     render() {
         var success = false;
         return (
             <Wrapper>
+                <h2> I'll reply soon!</h2>
                 <Formik
                     initialValues={{ email: '', password: '' }}
                     validate={values => {

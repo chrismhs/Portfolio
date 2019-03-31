@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Container = styled.div`
     padding: 30px 0 80px 0;
@@ -11,7 +12,22 @@ const FooterRow = styled.div`
 
 `
 const SocialLink = styled.a`
-    padding: 10px;
+    margin: 10px
+    color: rgb(${props => props.theme.link});
+
+	:hover {
+		color: rgb(${props => props.theme.link});
+		filter: brightness(120%);
+	}
+	
+	:after {
+        color: rgb(${props => props.theme.background});
+        background: rgb(${props => props.theme.link})
+    }
+`
+
+const ContactLink = styled(Link)`
+    margin: 10px
     color: rgb(${props => props.theme.link});
 
 	:hover {
@@ -33,9 +49,10 @@ class Footer extends Component {
                     Made by me, with love ❤️
                 </FooterRow>
                 <FooterRow>
-                    <SocialLink href="https://uk.linkedin.com/in/chrismhs" target="blank">LinkedIn</SocialLink>
-                    <SocialLink href="https://github.com/chrismhs" target="blank">GitHub</SocialLink>
-                    <SocialLink href="https://medium.com/@chrismhs" target="blank">Medium</SocialLink>
+                    <SocialLink href="https://uk.linkedin.com/in/chrismhs" target="blank" className="fancy">LinkedIn</SocialLink>
+                    {/* <SocialLink href="https://github.com/chrismhs" target="blank" className="fancy">GitHub</SocialLink> */}
+                    <SocialLink href="https://medium.com/@chrismhs" target="blank" className="fancy">Medium</SocialLink>
+                    <ContactLink to="/contact" href="" className="fancy">Contact</ContactLink>
                 </FooterRow>
             </Container>
         )

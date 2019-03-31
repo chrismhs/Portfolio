@@ -18,7 +18,8 @@ const CaseStudyContainer = styled.div`
 `
 const imageStyle = {
     maxHeight: '600px',
-    minWidth: '100%'
+    maxWidth: '100%',
+    // height: '100vh',
 };
 
 const ProjectLogo = styled.div`
@@ -59,10 +60,9 @@ class CaseStudyLeft extends Component {
                             <p>{this.props.body}</p>
                             <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="" className="fancy">View case study</ProjectLink>
                         </div>
-                        <div className="col-6">
+                        <div className="col-6 d-none d-lg-block img-fluid">
                             <ProgressiveImage
                                 src={this.props.mainImage}
-                                className="img-fluid d-none d-lg-block"
                                 placeholder={this.props.placeMainImage}
                             >
                             {(image, srcSetData) => {

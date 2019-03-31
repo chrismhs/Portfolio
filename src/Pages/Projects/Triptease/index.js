@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
+import theme from '../../../styles/theme.style';
+
 import Logo from './Logo.png';
 import img1 from './AgentPortal-half.png';
 import img2 from './response-flow.png';
@@ -42,9 +44,13 @@ const Anchor = styled.a`
 `
 
 class Triptease extends Component {
+    changeColor(){
+        this.props.changeThemeColor(theme.one)
+    }
+
     render() {
         return (
-            <Container className="page">
+            <Container onLoad={this.changeColor.bind(this)} className="page">
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="A.I. Augmented Chat"

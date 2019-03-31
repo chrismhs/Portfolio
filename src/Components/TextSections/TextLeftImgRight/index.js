@@ -30,22 +30,12 @@ class TextSection extends Component {
                             )
                         })}
                     </div>
-                    <ProgressiveImage
-                        src={this.props.imagesrc}
-                        placeholder={inline}
-                        className="img-fluid"
-                        placeholder={this.props.placeImageSrc}
-                    >
-                        {(image, srcSetData) => {
-                            return (
-                            <img
-                                style={imageStyle}
-                                src={image}
-                                sizes={srcSetData.sizes}
-                            />
-                            );
-                        }}
-                    </ProgressiveImage>
+                    <div className="col-12 col-md-6">
+                        <img
+                            src={this.props.imagesrc}
+                            className="img-fluid"
+                        />
+                    </div>
                 </div>
             </Container>
         )
