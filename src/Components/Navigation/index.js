@@ -79,8 +79,6 @@ const Contact = styled(Link) `
     }
 `;
 
-
-
 class Navigation extends React.Component {	  
 	constructor(props) {
 		super(props);
