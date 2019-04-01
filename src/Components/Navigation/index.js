@@ -60,10 +60,10 @@ LogoClip.defaultProps = {
 
 const Contact = styled(Link) `
 	float: right;
-	margin-top: 12px;
+	margin-top: 10px;
 	color: rgb(${props => props.theme.link});
 	background-color: rgb(${props => props.theme.background});
-	margin-right: 30px;
+	margin-right: 10px;
 	padding: 6px 12px;
 	border-radius: 4px;
 	height: 36px;

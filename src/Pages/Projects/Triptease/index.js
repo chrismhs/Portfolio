@@ -6,12 +6,8 @@ import theme from '../../../styles/theme.style';
 import Logo from './Logo.png';
 import img1 from './AgentPortal-half.png';
 import img2 from './response-flow.png';
-import img3 from './example-response.png';
+import img3 from './example-response-screenshot.png';
 import img4 from './fallback.png';
-import Place_img1 from './Placeholder-agentportal-half.png';
-import Place_img2 from './Placeholder-response-flow.png';
-import Place_img3 from './Placeholder-example-response.png';
-import Place_img4 from './Placeholder-fallback.png';
 
 import ProjectSummary from '../../../Components/ProjectSummary'
 import TextSection from '../../../Components/TextSections/TextSection';
@@ -56,7 +52,6 @@ class Triptease extends Component {
                     projectName="A.I. Augmented Chat"
                     synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests want to turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels simply don’t have the resource to sit by the phone, waiting for a message. Enter, the Auto-Agent."
                     mainImg={img1}
-                    placeMainImg={Place_img1}
                 ></ProjectSummary>
                 <AnchorContainer className="offset-sm-1 offset-md-0">
                     <Anchor className="fancy">Challenges & opportunities</Anchor>
@@ -75,18 +70,18 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img2}
-                    placeImageSrc={Place_img2}
                 />
-                <TextLeftImgRight
+                <TextSection
                     sectionHeader="Shortcutting onboarding"
                     sectionParagraph={[
                         "Triptease provide for many types of hotels and when building a new solution you need to tackle a significant part of the puzzle in one go to prove the value to early adoptors. Without these first few customers, you simply have no-one to test iterations on.",
                         "We highlighted a set of 70 FAQ questions that were asked regularly worldwide. By answering these questions, we estimated a response rate of 40%-50%.", 
                         "Our excited early adoptors were happy to fill out these questions, but as we grew, the size of the initial onboarding task was too great for many prospects, so we created an automatic FAQ generator, born from a hackday, which took data from a 3rd party API and spat out up to 25 well-written responses."
                     ]}
-                    imagesrc={img3}
-                    placeImageSrc={Place_img3}
                 /> 
+                <SingleImage
+                    imagesrc={img3}
+                />
                 <TextSection
                     sectionHeader="Graceful degregation"
                     sectionParagraph={[
@@ -96,7 +91,6 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img4}
-                    placeImageSrc={Place_img4}
                 />
             </Container>
         )

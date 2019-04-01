@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
-import ProgressiveImage from 'react-progressive-image';
-import inline from 'react-progressive-image';
-
 const Container = styled.div`
     padding: 30px 0 80px 0;
 `
@@ -22,7 +19,7 @@ class TextSection extends Component {
         return (
             <Container className="container">
                 <div className="row">
-                    <div className="col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
+                    <div className="col-md-6 col-lg-5 offset-lg-1">
                         <SectionHeader>{this.props.sectionHeader}</SectionHeader>
                         {this.props.sectionParagraph.map((paragraph,i) => {
                             return(
@@ -30,7 +27,7 @@ class TextSection extends Component {
                             )
                         })}
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-5">
                         <img
                             src={this.props.imagesrc}
                             className="img-fluid"
