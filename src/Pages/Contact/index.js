@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
-import ContactForm from '../../Components/ContactForm';
+import ContactSimple from '../../Components/ContactSimple';
 
 const Container = styled.div`
     padding-top: 120px;
@@ -16,9 +16,8 @@ class Contact extends Component {
         return (
             <Container className="page">
             <div className="row">
-                <div className="col-xs-10 col-sm-8 col-md-6 col-xl-4 offset-xs-1 offset-sm-2 offset-md-3 offset-xl-4">
-                    {/* <h3>Contact</h3> */}
-                    <ContactForm/>
+                <div className="col-8 offset-2">
+                    <ContactSimple/>
                 </div>
             </div>
             </Container>
