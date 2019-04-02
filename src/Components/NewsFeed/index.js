@@ -19,8 +19,8 @@ class NewsFeed extends Component {
                     </SectionHeader>
                     <div className="col-md-6" >
                         <Article
-                            sectionHeader="Nurturing a design culture"
-                            sectionBody="There's a growing phrase in the product design industry, that 'design should have an equal seat at the table', but how do you earn that? How do you prove the value of design? "
+                            sectionHeader="The (business) value of design"
+                            sectionBody="There's a growing phrase in the product design industry, that 'design should have an equal seat at the table', but how is that earned? Designers can offer..."
                             mediumLink="https://medium.muz.li/product-design-should-we-push-specialisation-ef392c12e42d"
                         />
                     </div>
