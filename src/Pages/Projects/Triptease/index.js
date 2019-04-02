@@ -9,9 +9,10 @@ import img2 from './response-flow.png';
 import img3 from './example-response-screenshot.png';
 import img4 from './fallback.png';
 
-import ProjectSummary from '../../../Components/ProjectSummary'
+import ParticleBackground from '../../../Components/Backgrounds/Particles';
+
+import ProjectSummary from '../../../Components/ProjectSummary';
 import TextSection from '../../../Components/TextSections/TextSection';
-import TextLeftImgRight from '../../../Components/TextSections/TextLeftImgRight';
 import SingleImage from '../../../Components/Images/SingleImage';
 
 const Container = styled.div`
@@ -47,6 +48,7 @@ class Triptease extends Component {
     render() {
         return (
             <Container onLoad={this.changeColor.bind(this)} className="page">
+                <ParticleBackground/>
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="A.I. Augmented Chat"
