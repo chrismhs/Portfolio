@@ -4,7 +4,7 @@ import styled, { withTheme } from "styled-components";
 import theme from '../../../styles/theme.style';
 
 import Logo from './Logo.png';
-import img1 from './AgentPortal-half.png';
+import img1 from './chat-flow.png';
 import img2 from './response-flow.png';
 import img3 from './example-response-screenshot.png';
 import img4 from './fallback.png';
@@ -18,27 +18,7 @@ import SingleImage from '../../../Components/Images/SingleImage';
 const Container = styled.div`
 
 `
-const AnchorContainer = styled.div`
-    display: inline-block;
-    margin-bottom: 100px;
 
-    @media (max-width: 768px) {
-        margin-bottom: 0;
-    }
-`
-
-const Anchor = styled.a`
-    color: rgb(${props => props.theme.link}) !important;
-    margin-bottom: 5px;
-    clear:both;
-    float:left;
-
-    :after {
-        color: rgb(${props => props.theme.background});
-        background: rgb(${props => props.theme.link})
-    }
-    
-`
 
 class Triptease extends Component {
     changeColor(){
@@ -55,13 +35,7 @@ class Triptease extends Component {
                     synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests want to turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels simply don’t have the resource to sit by the phone, waiting for a message. Enter, the Auto-Agent."
                     mainImg={img1}
                 ></ProjectSummary>
-                <AnchorContainer className="offset-sm-1 offset-md-0">
-                    <Anchor className="fancy">Challenges & opportunities</Anchor>
-                    <Anchor className="fancy">The users</Anchor>
-                    <Anchor className="fancy">Design process</Anchor>
-                    <Anchor className="fancy">Testing</Anchor>
-                    <Anchor className="fancy">In hindsight...</Anchor>
-                </AnchorContainer>
+                
                 <TextSection
                     sectionHeader="Challenges & opportunities"
                     sectionParagraph={[

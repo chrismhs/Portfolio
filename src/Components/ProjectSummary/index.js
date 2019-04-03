@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
 const MainImg = styled.img`
-position: absolute;
+height: 500px;
 
     @media (max-width: 768px) {
         position: relative;
+        height: 300px;
+        padding-top: 30px;
     }
 `
 
@@ -29,14 +31,36 @@ const SectionHeader = styled.h2`
     padding-bottom: 10px;
 `
 
+const AnchorContainer = styled.div`
+    display: inline-block;
+    margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 0;
+    }
+`
+
+const Anchor = styled.a`
+    color: rgb(${props => props.theme.link}) !important;
+    margin-bottom: 5px;
+    clear:both;
+    float:left;
+
+    :after {
+        color: rgb(${props => props.theme.background});
+        background: rgb(${props => props.theme.link})
+    }
+    
+`
+
 
 class ProjectSummary extends Component {
     render() {
         return (
             <Container className="container">
                 <div className="row">
-                    <div className="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 order-md-2">
-                        <MainImg src={this.props.mainImg} className="img-fluid"></MainImg>
+                    <div className="text-center col-12 col-md-6 offset-md-0 order-md-2">
+                        <MainImg src={this.props.mainImg} className="img-responsive"></MainImg>
                     </div>
                     <div className="col-sm-10 offset-sm-1 col-md-6 offset-md-0">
                         <ProjectLogo className="col-6 ">
@@ -44,6 +68,13 @@ class ProjectSummary extends Component {
                         </ProjectLogo>
                         <SectionHeader>{this.props.projectName}</SectionHeader>
                         <p>{this.props.synopsis}</p>
+                        <AnchorContainer className="offset-sm-1 offset-md-0">
+                            <Anchor className="fancy">Challenges & opportunities</Anchor>
+                            <Anchor className="fancy">The users</Anchor>
+                            <Anchor className="fancy">Design process</Anchor>
+                            <Anchor className="fancy">Testing</Anchor>
+                            <Anchor className="fancy">In hindsight...</Anchor>
+                        </AnchorContainer>
                     </div>
                     
                 </div>

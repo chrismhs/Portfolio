@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components"
-import ProgressiveImage from 'react-progressive-image';
-
-import theme from '../../../styles/theme.style';
 
 const CaseStudyContainer = styled.div`
     background-color: rgb(${props => props.projecttheme.background});
     color: rgb(${props => props.projecttheme.foreground});
-    height: 600px;
+    height: 550px;
     border-radius: 20px;
     margin-bottom: 50px;
 
@@ -16,11 +13,6 @@ const CaseStudyContainer = styled.div`
         height: 450px;
       }
 `
-const imageStyle = {
-    maxHeight: '600px',
-    maxWidth: '100%',
-    // height: '100vh',
-};
 
 const ProjectLogo = styled.div`
     height: auto;
@@ -46,6 +38,12 @@ const ProjectLink =  styled(Link)`
     }
 `
 
+const MainImg = styled.img`
+    height: 550px;
+    padding: 30px
+
+`
+
 class CaseStudyLeft extends Component {
     render() {
         return (
@@ -53,28 +51,19 @@ class CaseStudyLeft extends Component {
                 <CaseStudyContainer projecttheme={this.props.projecttheme}>
                     <div className="row">
                         <div className="col-10 col-lg-5 offset-1">
-                        <ProjectLogo logoWidth={this.props.logoWidth}>
+                            <ProjectLogo logoWidth={this.props.logoWidth}>
                                 <img src={this.props.logo} className="img-fluid"/>
                             </ProjectLogo>
                             <h2>{this.props.title}</h2>
                             <p>{this.props.body}</p>
                             <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="" className="fancy">View case study</ProjectLink>
                         </div>
-                        <div className="col-6 d-none d-lg-block img-fluid">
-                            <ProgressiveImage
+                        <div className="text-center col-6 d-none d-lg-block">
+                            <MainImg
                                 src={this.props.mainImage}
-                                placeholder={this.props.placeMainImage}
+                                className="rounded"
                             >
-                            {(image, srcSetData) => {
-                                return (
-                                <img
-                                    style={imageStyle}
-                                    src={image}
-                                    sizes={srcSetData.sizes}
-                                />
-                                );
-                            }}
-                            </ProgressiveImage>
+                            </MainImg>
                         </div>
                     </div>
                 </CaseStudyContainer>

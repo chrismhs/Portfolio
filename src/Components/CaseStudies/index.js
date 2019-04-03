@@ -6,11 +6,9 @@ import CaseStudyLeft from './CaseStudyLeft'
 import theme from '../../styles/theme.style';
 
 import LogoTriptease from '../../Pages/Projects/Triptease/Logo.png';
-import MainImageTriptease from '../../Pages/Projects/Triptease/AgentPortal-half.png';
-import PlaceMainImageTriptease from '../../Pages/Projects/Triptease/Placeholder-agentportal-half.png';
+import MainImageTriptease from '../../Pages/Projects/Triptease/chat-flow.png';
 import LogoFixr from '../../Pages/Projects/Fixr/box-logo-red.png';
 import MainImageFixr from '../../Pages/Projects/Fixr/fixr-main-image.png';
-import PlaceMainImageFixr from '../../Pages/Projects/Fixr/Placeholder-fixr-main-image.png';
 
 const CaseStudyContainer = styled.div `
     margin-bottom: 100px;
@@ -24,12 +22,11 @@ class CaseStudies extends Component {
                 <CaseStudyLeft
                     changeThemeColor={this.props.changeThemeColor}
                     projecttheme={theme.one}
-                    title={'Augmented A.I. Chat'}
+                    title={'A.I. Augmented Chat'}
                     body={'Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.'}
                     logo={LogoTriptease}
                     logoWidth={"200px"}
                     mainImage={MainImageTriptease}
-                    placeMainImage={PlaceMainImageTriptease}
                     projectLink={"/projects/triptease"}
                 />
                 <CaseStudyLeft
@@ -40,7 +37,6 @@ class CaseStudies extends Component {
                     logo={LogoFixr}
                     logoWidth={"150px"}
                     mainImage={MainImageFixr}
-                    placeMainImage={PlaceMainImageFixr}
                     projectLink={"/projects/fixr"}
                 />
             </CaseStudyContainer>
