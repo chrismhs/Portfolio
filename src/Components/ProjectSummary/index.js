@@ -24,6 +24,7 @@ const Container = styled.div`
 
 const ProjectLogo = styled.div`
     padding: 30px 0;
+    width: 200px
     
 `
 
@@ -33,7 +34,7 @@ const SectionHeader = styled.h2`
 
 const AnchorContainer = styled.div`
     display: inline-block;
-    margin-bottom: 100px;
+    margin: 30px 0 100px 0;
 
     @media (max-width: 768px) {
         margin-bottom: 0;
@@ -63,7 +64,7 @@ class ProjectSummary extends Component {
                         <MainImg src={this.props.mainImg} className="img-responsive"></MainImg>
                     </div>
                     <div className="col-sm-10 offset-sm-1 col-md-6 offset-md-0">
-                        <ProjectLogo className="col-6 ">
+                        <ProjectLogo>
                             <img src={this.props.projectLogo} className="img-fluid"/>
                         </ProjectLogo>
                         <SectionHeader>{this.props.projectName}</SectionHeader>

@@ -5,10 +5,15 @@ import styled from "styled-components";
 
 const ParticleContainer = styled(Particles)`
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
+    width: 50%;
     height: 100vh
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 50vh
+    }
 `
 
 export default class ParticleBackground extends React.Component {

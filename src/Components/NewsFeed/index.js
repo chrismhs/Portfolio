@@ -21,7 +21,7 @@ class NewsFeed extends Component {
                         <Article
                             sectionHeader="The (business) value of design"
                             sectionBody="There's a growing phrase in the product design industry, that 'design should have an equal seat at the table', but how is that earned? Designers can offer..."
-                            mediumLink="https://medium.muz.li/product-design-should-we-push-specialisation-ef392c12e42d"
+                            mediumLink="https://medium.com/@chrismhs/the-business-value-of-design-6f2a840450a0"
                         />
                     </div>
                     <div className="col-md-6" >
