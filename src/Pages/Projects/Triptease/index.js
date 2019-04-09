@@ -32,7 +32,7 @@ class Triptease extends Component {
                 <ProjectSummary
                     projectLogo={Logo}
                     projectName="A.I. Augmented Chat"
-                    synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests want to turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels simply don’t have the resource to sit by the phone, waiting for a message. Enter, the Auto-Agent."
+                    synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels don’t have the resource to sit by the phone. That's why we built the Auto-Agent."
                     mainImg={img1}
                 ></ProjectSummary>
                 
@@ -61,8 +61,8 @@ class Triptease extends Component {
                 <TextSection
                     sectionHeader="Graceful degregation"
                     sectionParagraph={[
-                        "The biggest challenge in conversational interfaces is admitting defeat whilst allowing users to continue to make decisions. Personal details are a valuable commodity, a fact that people are wising up to, but also one the hotel badly needs. The guest should want to leave contact their contact information, so the hotel can continue the conversation, resulting in a higher conversion rate.",
-                        "Imagine a maze. The most disappointing and heart-breaking moments are when you are presented with a dead end, but if we keep the journey going, the user never feels forced. By keeping options for conversation open, we would see a significant uplift."
+                        "The biggest challenge in conversational interfaces is failing gracefully. If the chatbot is unable to continue conversation, it needs to be able to get hold an email address to allow the conversation to continue with hotel staff but personal details are a valuable commodity, which people are wising up to. So, the challenge is to have the guest want to leave contact their contact information.",
+                        "The most important thing is making sure there are no dead ends. Imagine a maze. The most disappointing and heart-breaking moments are when you are presented with no more obvious options, but if we keep the journey going, the user never feels forced. By keeping options for conversation open, yet provide the ability to leave contact details at any time, we saw a significant uplift in email submission."
                     ]}
                 /> 
                 <SingleImage
