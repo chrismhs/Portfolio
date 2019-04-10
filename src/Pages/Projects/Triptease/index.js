@@ -32,7 +32,7 @@ class Triptease extends Component {
                 <ParticleBackground/>
                 <ProjectSummary
                     projectLogo={Logo}
-                    projectName="A Chatbot for Hotels"
+                    projectName="A.I. in hospitality"
                     synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels don’t have the resource to sit by the phone. That's why we built the Auto-Agent."
                     mainImg={img1}
                 ></ProjectSummary>

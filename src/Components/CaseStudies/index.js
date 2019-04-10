@@ -22,7 +22,7 @@ class CaseStudies extends Component {
                 <CaseStudyLeft
                     changeThemeColor={this.props.changeThemeColor}
                     projecttheme={theme.one}
-                    title={'A Chatbot for Hotels'}
+                    title={'A.I. in hospitality'}
                     body={'Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.'}
                     logo={LogoTriptease}
                     logoWidth={"200px"}

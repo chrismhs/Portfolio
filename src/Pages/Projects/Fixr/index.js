@@ -7,10 +7,10 @@ import Logo from './box-logo-red.png';
 import img1 from './fixr-main-image.png';
 import img2 from './EM.png';
 import img3 from './Process.png';
+import img4 from './settings.png';
 
 import ProjectSummary from '../../../Components/ProjectSummary'
 import TextSection from '../../../Components/TextSections/TextSection';
-import ContentImages from '../../../Components/Images/ContentImages';
 import SingleImage from '../../../Components/Images/SingleImage';
 
 const Container = styled.div`
@@ -46,14 +46,24 @@ class Triptease extends Component {
                 <TextSection
                     sectionHeader="The fastest flow"
                     sectionParagraph={[
-                        "Most ticket scanners have a well refined flow. Interactions are snappy and there are few steps, but we had an advantage; students purchase tickets differently.",
-                        "We found that there is a significant increase of multi-tickets purchases to events because the price is low and student often travel to events together.", 
+                        "Most ticket scanners have a well refined flow. To deliver a quick scan flow, we could simply research other scanners and follow best practices - there’s no point re-inventing the wheel. Our advantage needed to come from our company’s vision; being the best ticketing service for students.",
+                        "From the data collected from our early version, we found that there is a significant increase of multiple-ticket purchases to student events because the price is low and student often travel to events together - an opportunity unique to our market.", 
                         "For each scan, the majority of the time taken is during the scan and submit stages, not the ID check stage, so by processing multiple tickets in one scan would speed up entries.",
                         "By making the main requirement of the scanner be that it can scan multiple tickets in one go, we could drastically speed up the entry time for purchases with multiple tickets."
                     ]}
                 /> 
                 <SingleImage
                     imagesrc={img3}
+                />
+                <TextSection
+                    sectionHeader="Iterating & improving"
+                    sectionParagraph={[
+                        "After testing the original build and running field research trips, we found that many student door managers were even checking the names on the tickets, so the additional 2 clicks to get through the scanning process were slowing down admission. We created a ‘Rapid Scan’ mode, which would stay in a QR scan (camera) mode and automatically check in any ticket it saw, with an undo button to recall the scan if a mistake was made.",
+                        "We also found that smaller events only had one door manager, so there wasn’t much need to check the server and wait for a response every single ticket, which is a slow process when there was limited reception (~7s on edge networks). As long as the tickets had a purchase cut-off time, an offline version could be used to scan in locally. For security purposes, we then ran the upload in the background." 
+                    ]}
+                /> 
+                <SingleImage
+                    imagesrc={img4}
                 />
             </Container>
         )
