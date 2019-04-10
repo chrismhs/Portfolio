@@ -64,9 +64,8 @@ const Contact = styled(Link) `
 	color: rgb(${props => props.theme.link});
 	background-color: rgb(${props => props.theme.background});
 	margin-right: 10px;
-	padding: 6px 12px;
+	padding: 7px 12px 5px 12px;
 	border-radius: 4px;
-	height: 36px;
 
 	:hover {
 		color: rgb(${props => props.theme.link});

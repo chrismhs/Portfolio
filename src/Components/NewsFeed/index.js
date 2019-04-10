@@ -22,6 +22,7 @@ class NewsFeed extends Component {
                             sectionHeader="The (business) value of design"
                             sectionBody="There's a growing phrase in the product design industry, that 'design should have an equal seat at the table', but how is that earned? Designers can offer..."
                             mediumLink="https://medium.com/@chrismhs/the-business-value-of-design-6f2a840450a0"
+                            dateTime="Apr 3 • 3 min read"
                         />
                     </div>
                     <div className="col-md-6" >
@@ -29,6 +30,7 @@ class NewsFeed extends Component {
                             sectionHeader="Product Design: Should we push specialisation?"
                             sectionBody="Designers come in all shapes and sizes, so why are so many labeled ‘Product Designers’? Should we be supporting specialisation more or be keeping our ..."
                             mediumLink="https://medium.muz.li/product-design-should-we-push-specialisation-ef392c12e42d"
+                            dateTime="Feb 20 • 4 min read"
                         />
                     </div>
                 </div>

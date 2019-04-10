@@ -8,6 +8,7 @@ import img1 from './chat-flow.png';
 import img2 from './response-flow.png';
 import img3 from './example-response-screenshot.png';
 import img4 from './fallback.png';
+import img5 from './Enclosed-Chat.png';
 
 import ParticleBackground from '../../../Components/Backgrounds/Particles';
 
@@ -31,7 +32,7 @@ class Triptease extends Component {
                 <ParticleBackground/>
                 <ProjectSummary
                     projectLogo={Logo}
-                    projectName="A.I. Augmented Chat"
+                    projectName="A Chatbot for Hotels"
                     synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels don’t have the resource to sit by the phone. That's why we built the Auto-Agent."
                     mainImg={img1}
                 ></ProjectSummary>
@@ -67,6 +68,17 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img4}
+                />
+                <TextSection
+                    sectionHeader="What’s next?"
+                    sectionParagraph={[
+                        "As Triptease expands into Asia, internationalisation is the main focus. The first challenge will be to make the bot multi-lingual, which is suprisingly hard. IBM Watson, doesn’t yet have advanced support for a number languages, but more challenging for Triptease is that for each language, you need to train responses, which can only be done in the native tongue. There is a possibility to Google Translate, but in initial tests, the nuance of dialect is lost and IBM Watson misses the context, meaning a higher failure rate.",
+                        "Additionally, many APAC hotels have different operating proceedures. Some have more available staff, so they have the chat solution staffed 24/7. Their problem is classification of incoming chats; figuring out where their time is better spent and improve speed of response for the higher-value conversations.",
+                        "Regardless of what’s next, Conversational A.I. is a challenging, yet exciting space."
+                    ]}
+                /> 
+                <SingleImage
+                    imagesrc={img5}
                 />
             </Container>
         )
