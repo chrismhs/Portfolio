@@ -16,7 +16,7 @@ class Contact extends Component {
         return (
             <Container className="page">
             <div className="row">
-                <div className="col-8 offset-2">
+                <div className="col-12 col-sm-8 col-md-6 offset-md-1">
                     <ContactSimple/>
                 </div>
             </div>
