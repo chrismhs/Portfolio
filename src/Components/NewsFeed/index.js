@@ -15,7 +15,7 @@ class NewsFeed extends Component {
                 <div className="row">
                     <SectionHeader className="col-md-8 col-lg-6 offset-md-1">
                         <h2>Writings</h2>
-                        <p>Tech articles don't age well, so this list of available posts will likely not exceed more than a handful - I'd like them to remain somewhat relevant. All created and held <Link href="https://medium.com/@chrismhs/latest" target="black">on medium</Link>.</p>
+                        <p>I write about being a designer embedded within technology product teams and the challenges and opportunities that this role provides. All created and held <Link href="https://medium.com/@chrismhs/latest" target="black">on medium</Link>.</p>
                     </SectionHeader>
                     <div className="col-md-6" >
                         <Article

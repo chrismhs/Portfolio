@@ -14,7 +14,7 @@ import Footer from './Components/Footer'
 const Body = styled.div`
   background-color: rgb(${props => props.theme.background });
   color: rgb(${props => props.theme.foreground});
-  transition: 0.5s linear;
+  transition: 0.2s linear;
   min-height : 100vh; 
 `
 

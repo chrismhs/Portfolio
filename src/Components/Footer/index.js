@@ -46,7 +46,7 @@ class Footer extends Component {
         return (
             <Container className="container">
                 <FooterRow>
-                    Made by me.
+                    <p>Made by me.</p>
                 </FooterRow>
                 <FooterRow>
                     <SocialLink href="https://uk.linkedin.com/in/chrismhs" target="blank" className="fancy">LinkedIn</SocialLink>
