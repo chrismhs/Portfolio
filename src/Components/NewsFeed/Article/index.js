@@ -54,7 +54,7 @@ class Article extends Component {
         return (
                 <a href={this.props.mediumLink} target="blank">
                     <ArticleContent>
-                        <DateandReadingTime>Feb 20 • 4 min read</DateandReadingTime>
+                        <DateandReadingTime>{this.props.dateTime}</DateandReadingTime>
                         <h5>{this.props.sectionHeader}</h5>
                         <ContentCopy>{this.props.sectionBody}</ContentCopy>
                         <LinkContainer>

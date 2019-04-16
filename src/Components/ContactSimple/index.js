@@ -2,8 +2,10 @@ import React from 'react';
 import styled, { withTheme } from "styled-components";
 
 const Wrapper = styled.div`
-margin: 100px 0 200px 0;
-text-align: center;
+padding-top: 100px;
+// text-align: center;
+min-height: 400px;
+height: 60vh;
 `
 
 const ContactLink = styled.a`
@@ -28,7 +30,7 @@ class ContactForm extends React.Component {
     render() {
         return (
             <Wrapper>
-                <p> Drop me an email. Easy.</p>
+                <p>Whether you'd like me to talk at an event, chat to me about a Chris-shaped job opportunity, or simply want to chat about tech, I'm always available.</p>
                 <h3> <ContactLink href="mailto:chris@hastings-spital.co.uk">chris@hastings-spital.co.uk</ContactLink></h3>
                 
             </Wrapper>

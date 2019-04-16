@@ -1,5 +1,5 @@
 export default {
-  primary: {background: '255, 255, 255', foreground: '27, 30, 39', link: '94, 67, 194',},
+  primary: {background: '255, 255, 255', foreground: '27, 30, 39', link: '14, 94, 206',},
   one: {background: '246, 246, 246', foreground: '27, 30, 39', link: '94, 67, 194',},
   two: {background: '29, 29, 30', foreground: '255, 255, 255', link: '204, 0, 62',},
   three: {background: '29, 29, 30', foreground: '255, 255, 255', link: '217, 36, 7',},
