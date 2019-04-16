@@ -26,6 +26,8 @@ const ProjectLogo = styled.div`
 
 const ProjectLink =  styled(Link)`
     color: rgb(${props => props.projecttheme.link});
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgb(${props => props.projecttheme.link});
 
     :hover {
         color: rgb(${props => props.projecttheme.link});
@@ -34,7 +36,7 @@ const ProjectLink =  styled(Link)`
 
     :after {
         color: rgb(${props => props.projecttheme.background});
-        background: rgb(${props => props.projecttheme.link})
+        background: rgb(${props => props.projecttheme.link});
     }
 `
 
@@ -56,7 +58,7 @@ class CaseStudyLeft extends Component {
                             </ProjectLogo>
                             <h2>{this.props.title}</h2>
                             <p>{this.props.body}</p>
-                            <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="" className="fancy">View case study</ProjectLink>
+                            <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="">View case study</ProjectLink>
                         </div>
                         <div className="text-center col-6 d-none d-lg-block">
                             <MainImg

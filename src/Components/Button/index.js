@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const ButtonUI = styled.button`
-    height: 44px;
     background-color: rgb(${props => props.theme.link});
     color: rgb(${props => props.theme.background}) !important;
     padding: 12px 15px;
