@@ -31,6 +31,9 @@ class Triptease extends Component {
                     projectName="Entry Manager"
                     synopsis="A door management solution built for speed. Built on iOS and Android for both mobile and tablet devices, it aims to be the most efficient ticket scanner in the market, scanning up to 2,000 tickets an hour."
                     mainImg={img1}
+                    year='2017'
+                    role='Project lead, UX researcher, product designer'
+                    technologies="iOS app, android app, graceful service degredation"
                 ></ProjectSummary>
                 <TextSection
                     sectionHeader="Challenges & opportunities"

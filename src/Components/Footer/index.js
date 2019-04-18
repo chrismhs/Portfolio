@@ -3,7 +3,7 @@ import styled, { withTheme } from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Container = styled.div`
-    padding: 30px 0 80px 0;
+    padding: 30px 0 50px 0;
 `
 
 const FooterRow = styled.div`

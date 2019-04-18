@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
+import MyInvolvement from './MyInvolvement';
+
 const MainImg = styled.img`
 height: 500px;
 
@@ -69,6 +71,11 @@ class ProjectSummary extends Component {
                         </ProjectLogo>
                         <SectionHeader>{this.props.projectName}</SectionHeader>
                         <p>{this.props.synopsis}</p>
+                        <MyInvolvement
+                            year={this.props.year}
+                            role={this.props.role}
+                            technologies={this.props.technologies}
+                        />
                         {/* <AnchorContainer className="offset-sm-1 offset-md-0">
                             <Anchor className="fancy">Challenges & opportunities</Anchor>
                             <Anchor className="fancy">The users</Anchor>
