@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components"
 
+import Fade from 'react-reveal/Fade';
+
 const CaseStudyContainer = styled.div`
     background-color: rgb(${props => props.projecttheme.background});
     color: rgb(${props => props.projecttheme.foreground});
@@ -61,11 +63,13 @@ class CaseStudyLeft extends Component {
                             <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="">View case study</ProjectLink>
                         </div>
                         <div className="text-center col-6 d-none d-lg-block">
-                            <MainImg
-                                src={this.props.mainImage}
-                                className="rounded"
-                            >
-                            </MainImg>
+                            <Fade>
+                                <MainImg
+                                    src={this.props.mainImage}
+                                    className="rounded"
+                                >
+                                </MainImg>
+                            </Fade>
                         </div>
                     </div>
                 </CaseStudyContainer>

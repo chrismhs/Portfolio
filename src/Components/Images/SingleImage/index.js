@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
 
+import Fade from 'react-reveal/Fade';
+
 const Container = styled.div`
     padding: 30px 0 30px 0;
 `
@@ -14,10 +16,12 @@ class SingleImage extends Component {
             <Container className="container">
                 <div className="row">
                     <ContentImage className="col-lg-8 offset-lg-2">
-                        <img
-                            src={this.props.imagesrc}
-                            className="img-fluid"
-                        />
+                        <Fade>
+                            <img
+                                src={this.props.imagesrc}
+                                className="img-fluid"
+                            />
+                        </Fade>
                     </ContentImage>
                 </div>
             </Container>

@@ -20,6 +20,9 @@ const RightColumn = styled.div`
     float: none;
     width: auto;
     overflow: hidden;
+    @media (max-width: 992px) {
+        overflow: visible;
+    }
 `
 const InvRow = styled.div`
     margin: 10px 0;
