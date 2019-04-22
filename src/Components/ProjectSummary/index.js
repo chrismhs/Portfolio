@@ -8,12 +8,9 @@ height: 600px;
 
     @media (max-width: 768px) {
         position: relative;
-        height: 300px;
+        height: 400px;
         padding-top: 30px;
     }
-`
-
-const Background = styled.div`
 `
 
 const Container = styled.div`
