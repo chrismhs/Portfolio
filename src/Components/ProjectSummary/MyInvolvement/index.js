@@ -2,11 +2,12 @@ import React from "react";
 import styled, { withTheme } from 'styled-components';
 
 const InvolvementContainer = styled.div`
-   background: rgba(${props => props.theme.foreground}, 0.1);
-   padding: 20px 20px 10px 20px;
-   margin-top: 20px;
-   border-radius: 10px;
-   transition: 0.5s ease;
+    border-top: 1px solid rgba(${props => props.theme.foreground}, 0.1);
+    border-bottom: 1px solid rgba(${props => props.theme.foreground}, 0.1);
+    padding: 20px 0 10px 0;
+    margin-top: 30px;
+    transition: 0.5s ease;
+    font-family: 'HKGrotesk', Roboto, sans-serif;
 `
 
 const LeftColumn = styled.div`
@@ -32,8 +33,6 @@ const InvRow = styled.div`
 const InvHeader = styled.h5`
     font-size: 18px;
     margin-top: -5px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(${props => props.theme.foreground}, 0.2);
 `
 
 
