@@ -8,7 +8,7 @@ import theme from '../../styles/theme.style';
 import LogoTriptease from '../../Pages/Projects/Triptease/Logo.png';
 import MainImageTriptease from '../../Pages/Projects/Triptease/chat-flow.png';
 import LogoFixr from '../../Pages/Projects/Fixr/box-logo-red.png';
-import MainImageFixr from '../../Pages/Projects/Fixr/fixr-main-image.png';
+import MainImageFixr from '../../Pages/Projects/Fixr/two-apps.png';
 
 const CaseStudyContainer = styled.div `
     margin-bottom: 100px;

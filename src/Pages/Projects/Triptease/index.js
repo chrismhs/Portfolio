@@ -4,7 +4,7 @@ import styled, { withTheme } from "styled-components";
 import theme from '../../../styles/theme.style';
 
 import Logo from './Logo.png';
-import img1 from './chat-flow.png';
+import img1 from './chat-flow-main.png';
 import img2 from './response-flow.png';
 import img3 from './example-response-screenshot.png';
 import img4 from './fallback.png';

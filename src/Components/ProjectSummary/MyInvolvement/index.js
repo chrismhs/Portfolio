@@ -2,9 +2,11 @@ import React from "react";
 import styled, { withTheme } from 'styled-components';
 
 const InvolvementContainer = styled.div`
-   border: 3px solid rgba(${props => props.theme.foreground}, 0.2);
+   background: rgba(${props => props.theme.foreground}, 0.05);
    padding: 20px 20px 10px 20px;
    margin-top: 20px;
+   border-radius: 10px;
+   transition: 0.5s ease;
 `
 
 const LeftColumn = styled.div`
@@ -31,7 +33,7 @@ const InvHeader = styled.h5`
     font-size: 18px;
     margin-top: -5px;
     padding-bottom: 10px;
-    border-bottom: 3px solid rgba(${props => props.theme.foreground}, 0.2);
+    border-bottom: 1px solid rgba(${props => props.theme.foreground}, 0.2);
 `
 
 

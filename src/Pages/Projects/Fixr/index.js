@@ -4,7 +4,7 @@ import styled, { withTheme } from "styled-components";
 import theme from '../../../styles/theme.style';
 
 import Logo from './box-logo-red.png';
-import img1 from './fixr-main-image.png';
+import img1 from './gloved-hand.png';
 import img2 from './EM.png';
 import img3 from './Process.png';
 import img4 from './settings.png';

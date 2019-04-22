@@ -4,7 +4,7 @@ import styled, { withTheme } from "styled-components";
 import MyInvolvement from './MyInvolvement';
 
 const MainImg = styled.img`
-height: 500px;
+height: 600px;
 
     @media (max-width: 768px) {
         position: relative;

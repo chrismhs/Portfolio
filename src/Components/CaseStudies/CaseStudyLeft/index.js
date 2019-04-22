@@ -62,7 +62,7 @@ class CaseStudyLeft extends Component {
                             <p>{this.props.body}</p>
                             <ProjectLink projecttheme={this.props.projecttheme} to={this.props.projectLink} href="">View case study</ProjectLink>
                         </div>
-                        <div className="text-center col-6 d-none d-lg-block">
+                        <div className="text-center col-6 d-none d-lg-block overflow-hidden">
                             <Fade>
                                 <MainImg
                                     src={this.props.mainImage}
