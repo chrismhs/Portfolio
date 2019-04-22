@@ -2,7 +2,7 @@ import React from "react";
 import styled, { withTheme } from 'styled-components';
 
 const InvolvementContainer = styled.div`
-   background: rgba(${props => props.theme.foreground}, 0.05);
+   background: rgba(${props => props.theme.foreground}, 0.1);
    padding: 20px 20px 10px 20px;
    margin-top: 20px;
    border-radius: 10px;
