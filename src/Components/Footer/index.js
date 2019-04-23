@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Router, Link } from "react-router-dom";
 
 const Container = styled.div`
     padding: 30px 0 50px 0;
@@ -46,11 +46,10 @@ class Footer extends Component {
         return (
             <Container className="container">
                 <FooterRow>
-                    <p>Made by me.</p>
+                <SocialLink href="https://github.com/chrismhs" target="blank" className="fancy">Made by me.</SocialLink>
                 </FooterRow>
                 <FooterRow>
                     <SocialLink href="https://uk.linkedin.com/in/chrismhs" target="blank" className="fancy">LinkedIn</SocialLink>
-                    {/* <SocialLink href="https://github.com/chrismhs" target="blank" className="fancy">GitHub</SocialLink> */}
                     <SocialLink href="https://medium.com/@chrismhs" target="blank" className="fancy">Medium</SocialLink>
                     <ContactLink to="/contact" href="" className="fancy">Contact</ContactLink>
                 </FooterRow>

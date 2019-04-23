@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const ButtonUI = styled.button`
     background-color: rgb(${props => props.theme.link});
@@ -27,8 +27,6 @@ const ButtonUI = styled.button`
         outline: 0;
     }
 `
-
-
 
 class Button extends React.Component {
 

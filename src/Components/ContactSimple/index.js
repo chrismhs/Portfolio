@@ -2,10 +2,9 @@ import React from 'react';
 import styled, { withTheme } from "styled-components";
 
 const Wrapper = styled.div`
-padding-top: 100px;
-// text-align: center;
-min-height: 400px;
-height: 60vh;
+    padding-top: 100px;
+    min-height: 400px;
+    height: 60vh;
 `
 
 const ContactLink = styled.a`

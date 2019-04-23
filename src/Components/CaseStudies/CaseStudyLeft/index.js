@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Router, Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components"
 
 import Fade from 'react-reveal/Fade';
@@ -56,7 +56,11 @@ class CaseStudyLeft extends Component {
                     <div className="row">
                         <div className="col-10 col-lg-5 offset-1">
                             <ProjectLogo logoWidth={this.props.logoWidth}>
-                                <img src={this.props.logo} className="img-fluid"/>
+                                <img
+                                    src={this.props.logo}
+                                    alt={this.props.imagealt}
+                                    className="img-fluid"
+                                />
                             </ProjectLogo>
                             <h2>{this.props.title}</h2>
                             <p>{this.props.body}</p>
@@ -66,6 +70,7 @@ class CaseStudyLeft extends Component {
                             <Fade>
                                 <MainImg
                                     src={this.props.mainImage}
+                                    alt={this.props.imagealt}
                                     className="rounded"
                                 >
                                 </MainImg>
