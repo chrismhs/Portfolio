@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import { HashRouter} from "react-router-dom";
+import ReactGA from 'react-ga';
 
 import styled, { ThemeProvider } from "styled-components";
 import ScrollToTop from 'react-router-scroll-top'
@@ -24,6 +25,11 @@ class App extends Component {
     this.state = {
       theme: theme.primary,
     }
+  }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-131855428-1');
+    ReactGA.pageview('/homepage');
   }
   
   changeThemeColor = (theme) =>{

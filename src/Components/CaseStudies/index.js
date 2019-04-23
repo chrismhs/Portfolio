@@ -39,6 +39,7 @@ class CaseStudies extends Component {
                     mainImage={MainImageFixr}
                     projectLink={"/projects/fixr"}
                 />
+                
             </CaseStudyContainer>
         )
     }

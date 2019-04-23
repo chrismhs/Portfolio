@@ -6,7 +6,6 @@ import Contact from '../../Pages/Contact'
 import Triptease from '../../Pages/Projects/Triptease'
 import Fixr from '../../Pages/Projects/Fixr'
 
-
 function Container({ changeThemeColor }) {
     return (
         <div className="container">
