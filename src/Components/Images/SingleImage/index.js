@@ -19,6 +19,7 @@ class SingleImage extends Component {
                         <Fade>
                             <img
                                 src={this.props.imagesrc}
+                                alt={this.props.imagealt}
                                 className="img-fluid"
                             />
                         </Fade>

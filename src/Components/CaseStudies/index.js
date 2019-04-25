@@ -14,7 +14,6 @@ const CaseStudyContainer = styled.div `
     margin-bottom: 100px;
 `
 
-
 class CaseStudies extends Component {
     render() {
         return (
@@ -38,8 +37,7 @@ class CaseStudies extends Component {
                     logoWidth={"150px"}
                     mainImage={MainImageFixr}
                     projectLink={"/projects/fixr"}
-                />
-                
+                />  
             </CaseStudyContainer>
         )
     }

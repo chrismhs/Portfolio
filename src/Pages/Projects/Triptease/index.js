@@ -36,7 +36,7 @@ class Triptease extends Component {
                     synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels don’t have the resource to sit by the phone. That's why we built the Auto-Agent."
                     mainImg={img1}
                     year='2018'
-                    role='Product designer, Conversational interfaces'
+                    myrole='Product designer, Conversational interfaces'
                     technologies="Natural language processing, Intent-based analysis, State management"
                 ></ProjectSummary>
                 

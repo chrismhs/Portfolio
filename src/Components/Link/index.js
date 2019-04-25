@@ -1,4 +1,3 @@
-
 import styled, { withTheme } from "styled-components"
 
 const Link = styled.a`
@@ -12,6 +11,5 @@ const Link = styled.a`
         transition: all .3s ease-out;
 	}
 `
-
 
 export default withTheme(Link);

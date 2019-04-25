@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Router, Link } from "react-router-dom";
 import styled, { withTheme } from 'styled-components';
 
 const Nav = styled.div `
