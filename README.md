@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## What is this?
 
 The portfolio of Chris Hastings-Spital.<br>
-This is my first react project which I've made it public in the hopes that others may offer advice on how to improve.
+This is my first react project which I've made it public in the hopes that others may offer advice on how to improve, but please feel free to clone and adapt to your own needs if you would like. Credit would be lovely!
 
 ### Current thoughts
 
