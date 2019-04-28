@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
+import Fade from 'react-reveal/Fade';
 
 import MyInvolvement from './MyInvolvement';
 
@@ -37,10 +38,13 @@ class ProjectSummary extends Component {
             <Container className="container">
                 <div className="row">
                     <div className="text-center col-12 col-md-6 offset-md-0 order-md-2">
-                        <MainImg
-                            src={this.props.mainImg}
-                            alt={this.props.imagealt}
-                            className="img-responsive"></MainImg>
+                        <Fade>
+                            <MainImg
+                                src={this.props.mainImg}
+                                alt={this.props.imagealt}
+                                className="img-responsive">
+                            </MainImg>
+                        </Fade>
                     </div>
                     <div className="col-sm-10 offset-sm-1 col-md-6 offset-md-0">
                         <ProjectLogo>
