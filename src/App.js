@@ -12,17 +12,15 @@ import Navigation from './Components/Navigation'
 import Container from './Components/Container'
 import Footer from './Components/Footer'
 
+ReactGA.initialize('UA-131855428-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const Body = styled.div`
   background-color: rgb(${props => props.theme.background });
   color: rgb(${props => props.theme.foreground});
   transition: 0.2s linear;
   min-height : 100vh; 
 `
-
-function initializeReactGA() {
-  ReactGA.initialize('UA-131855428-2');
-  ReactGA.pageview('/homepage');
-}
 
 class App extends Component {
   constructor(props) {
