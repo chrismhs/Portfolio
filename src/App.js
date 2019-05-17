@@ -19,17 +19,17 @@ const Body = styled.div`
   min-height : 100vh; 
 `
 
+function initializeReactGA() {
+  ReactGA.initialize('UA-131855428-2');
+  ReactGA.pageview('/homepage');
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       theme: theme.primary,
     }
-  }
-
-  initializeReactGA() {
-    ReactGA.initialize('UA-131855428-2');
-    ReactGA.pageview('/homepage');
   }
   
   changeThemeColor = (theme) =>{
