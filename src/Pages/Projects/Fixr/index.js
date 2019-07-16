@@ -33,14 +33,14 @@ class Triptease extends Component {
                     mainImg={img1}
                     year='2017'
                     myrole='Project lead, UX researcher, product designer'
-                    technologies="iOS app, android app, graceful service degredation"
+                    technologies="iOS app, android app, graceful service degradation"
                 ></ProjectSummary>
                 <TextSection
                     sectionHeader="Challenges & opportunities"
                     sectionParagraph={[
                         "Scanning tickets has always been slow. We’ve all been there, the door manager doesn’t have wifi, so the connection is slow, or the person in front has 12 tickets and they are frantically scrolling down a PDF to see which one they haven’t scanned yet.",
-                        "As a fast-paced startup, FIXR was keen to make a bold statement; to make the fastest entry manager. Ever. However, this comes with  challenges as the application needs to be secure due to strict capacity laws, it couldn’t ever allow entry to a someone without a valid ticket. A problem made more difficult with real-world usage as many door managers work in areas of patchy reception, like a basement nightclub or even outside at sport events. Also, door managers often wear gloves; albeit the ones with the touch sensitive pads on the thumb and fore-finger, so we had to be wary of fiddley interactions.", 
-                        "In terms of technical limitations, it had to be backwards compatable to iPhone 4 and usable on android tablets as many event organisers used them to monitor capacity during the event."
+                        "As a fast-paced startup, FIXR was keen to make a bold statement; to make the fastest entry manager. Ever. However, this comes with  challenges as the application needs to be secure due to strict capacity laws, it couldn’t ever allow entry to a someone without a valid ticket. A problem made more difficult with real-world usage as many door managers work in areas of patchy reception, like a basement nightclub or even outside at sport events. Also, door managers often wear gloves; albeit the ones with the touch sensitive pads on the thumb and fore-finger, so we had to be wary of fiddly interactions.", 
+                        "In terms of technical limitations, it had to be backwards compatible to iPhone 4 and usable on android tablets as many event organisers used them to monitor capacity during the event."
                     ]}
                 /> 
                 <SingleImage

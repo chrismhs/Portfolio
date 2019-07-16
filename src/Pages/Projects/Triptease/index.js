@@ -54,16 +54,16 @@ class Triptease extends Component {
                 <TextSection
                     sectionHeader="Shortcutting onboarding"
                     sectionParagraph={[
-                        "Triptease provide for many types of hotels and when building a new solution you need to tackle a significant part of the puzzle in one go to prove the value to early adoptors. Without these first few customers, you simply have no-one to test iterations on.",
+                        "Triptease provide for many types of hotels and when building a new solution you need to tackle a significant part of the puzzle in one go to prove the value to early adopters. Without these first few customers, you simply have no-one to test iterations on.",
                         "We highlighted a set of 70 FAQ questions that were asked regularly worldwide. By answering these questions, we estimated a response rate of 40%-50%.", 
-                        "Our excited early adoptors were happy to fill out these questions, but as we grew, the size of the initial onboarding task was too great for many prospects, so we created an automatic FAQ generator, born from a hackday, which took data from a 3rd party API and spat out up to 25 well-written responses."
+                        "Our excited early adopters were happy to fill out these questions, but as we grew, the size of the initial onboarding task was too great for many prospects, so we created an automatic FAQ generator, born from a hackday, which took data from a 3rd party API and spat out up to 25 well-written responses."
                     ]}
                 /> 
                 <SingleImage
                     imagesrc={img3}
                 />
                 <TextSection
-                    sectionHeader="Graceful degregation"
+                    sectionHeader="Graceful degradation"
                     sectionParagraph={[
                         "The biggest challenge in conversational interfaces is failing gracefully. If the chatbot is unable to continue conversation, it needs to be able to get hold an email address to allow the conversation to continue with hotel staff but personal details are a valuable commodity, which people are wising up to. So, the challenge is to have the guest want to leave contact their contact information.",
                         "The most important thing is making sure there are no dead ends. Imagine a maze. The most disappointing and heart-breaking moments are when you are presented with no more obvious options, but if we keep the journey going, the user never feels forced. By keeping options for conversation open, yet provide the ability to leave contact details at any time, we saw a significant uplift in email submission."
@@ -75,8 +75,8 @@ class Triptease extends Component {
                 <TextSection
                     sectionHeader="What’s next?"
                     sectionParagraph={[
-                        "As Triptease expands into Asia, internationalisation is the main focus. The first challenge will be to make the bot multi-lingual, which is suprisingly hard. IBM Watson, doesn’t yet have advanced support for a number languages, but more challenging for Triptease is that for each language, you need to train responses, which can only be done in the native tongue. There is a possibility to Google Translate, but in initial tests, the nuance of dialect is lost and IBM Watson misses the context, meaning a higher failure rate.",
-                        "Additionally, many APAC hotels have different operating proceedures. Some have more available staff, so they have the chat solution staffed 24/7. Their problem is classification of incoming chats; figuring out where their time is better spent and improve speed of response for the higher-value conversations.",
+                        "As Triptease expands into Asia, internationalisation is the main focus. The first challenge will be to make the bot multi-lingual, which is surprisingly hard. IBM Watson, doesn’t yet have advanced support for a number languages, but more challenging for Triptease is that for each language, you need to train responses, which can only be done in the native tongue. There is a possibility to Google Translate, but in initial tests, the nuance of dialect is lost and IBM Watson misses the context, meaning a higher failure rate.",
+                        "Additionally, many APAC hotels have different operating procedures. Some have more available staff, so they have the chat solution staffed 24/7. Their problem is classification of incoming chats; figuring out where their time is better spent and improve speed of response for the higher-value conversations.",
                         "Regardless of what’s next, Conversational A.I. is a challenging, yet exciting space."
                     ]}
                 /> 
