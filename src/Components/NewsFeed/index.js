@@ -19,6 +19,22 @@ class NewsFeed extends Component {
                     </SectionHeader>
                     <div className="col-md-6" >
                         <Article
+                            sectionHeader="The Direct Booking Summit: Hotel website design takeaways"
+                            sectionBody="In an interactive discussion on how to prioritise a direct booking budget, Triptease co-founder, Charlie Osmond, Starwood’s Joe Pettigrew and CEO of D-EDGE ..."
+                            mediumLink="https://medium.com/@chrismhs/the-direct-booking-summit-hotel-website-design-takeaways-a546e34be00b"
+                            dateTime="Jun 26 • 5 min read"
+                        />
+                    </div>
+                    <div className="col-md-6" >
+                        <Article
+                            sectionHeader="The five most damaging hotel website design mistakes - and how to fix them"
+                            sectionBody="Spending time and effort bringing customers to your website is only half the battle when it comes to driving direct bookings. You also need to make sure ..."
+                            mediumLink="https://medium.com/@chrismhs/the-five-most-damaging-hotel-website-design-mistakes-and-how-to-fix-them-cd44f2e78d30"
+                            dateTime="May 13 • 5 min read"
+                        />
+                    </div>
+                    <div className="col-md-6" >
+                        <Article
                             sectionHeader="The (business) value of design"
                             sectionBody="There's a growing phrase in the product design industry, that 'design should have an equal seat at the table', but how is that earned? Designers can offer..."
                             mediumLink="https://medium.com/@chrismhs/the-business-value-of-design-6f2a840450a0"
