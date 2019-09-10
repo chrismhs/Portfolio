@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled, { withTheme } from "styled-components";
+import ReactGA from 'react-ga';
 
 const ArticleContent = styled.div`
     height: 270px;
@@ -35,8 +36,8 @@ const LinkContainer = styled.div`
     bottom: 60px;
 `
 
-const ArticleLink = styled.a`
-    color: rgb(${props => props.theme.link});
+const ArticleLink = styled(ReactGA.OutboundLink)`
+    color: rgb(${props => props.theme.link}) !important;
 
     :hover {
 		color: rgb(${props => props.theme.link});
@@ -58,7 +59,7 @@ class Article extends Component {
                         <h5>{this.props.sectionHeader}</h5>
                         <ContentCopy>{this.props.sectionBody}</ContentCopy>
                         <LinkContainer>
-                            <ArticleLink className="fancy" href={this.props.mediumLink} target="blank">Read on...</ArticleLink>
+                            <ArticleLink  eventLabel={this.props.sectionHeader} className="fancy" to={this.props.mediumLink} target="_blank">Read on...</ArticleLink>
                         </LinkContainer>
                     </ArticleContent>
                 </a>
