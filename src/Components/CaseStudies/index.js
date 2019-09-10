@@ -24,8 +24,10 @@ class CaseStudies extends Component {
                     title={'A.I. in hospitality'}
                     body={'Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.'}
                     logo={LogoTriptease}
+                    logoalt={'Triptease logo'}
                     logoWidth={"200px"}
                     mainImage={MainImageTriptease}
+                    imagealt={'Chat dialog UI'}
                     projectLink={"/projects/triptease"}
                 />
                 <CaseStudyLeft
@@ -34,8 +36,10 @@ class CaseStudies extends Component {
                     title={'Ticketing millenials'}
                     body={'Building a best-in-class door scanner for educational institutes and student societies that fits into their fast-paced and low-cost lifestyles.'}
                     logo={LogoFixr}
+                    logoalt={'Fixr logo'}
                     logoWidth={"150px"}
                     mainImage={MainImageFixr}
+                    imagealt={'Scanner main list view'}
                     projectLink={"/projects/fixr"}
                 />  
             </CaseStudyContainer>

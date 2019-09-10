@@ -58,7 +58,7 @@ class CaseStudyLeft extends Component {
                             <ProjectLogo logoWidth={this.props.logoWidth}>
                                 <img
                                     src={this.props.logo}
-                                    alt={this.props.imagealt}
+                                    alt={this.props.logoalt}
                                     className="img-fluid"
                                 />
                             </ProjectLogo>
