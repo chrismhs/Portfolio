@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
-import ReactGA from 'react-ga';
 
 import ContactSimple from '../../Components/ContactSimple';
-
-ReactGA.pageview('/contact');
 
 const Container = styled.div`
     padding-top: 120px;
@@ -15,6 +12,7 @@ const Container = styled.div`
 `
 
 class Contact extends Component {
+    
     render() {
         return (
             <Container className="page">

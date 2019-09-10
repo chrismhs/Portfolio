@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from "styled-components";
-import ReactGA from 'react-ga';
 
 import theme from '../../../styles/theme.style';
 
@@ -16,8 +15,6 @@ import ParticleBackground from '../../../Components/Backgrounds/Particles';
 import ProjectSummary from '../../../Components/ProjectSummary';
 import TextSection from '../../../Components/TextSections/TextSection';
 import SingleImage from '../../../Components/Images/SingleImage';
-
-ReactGA.pageview('/projects/triptease');
 
 const Container = styled.div`
 

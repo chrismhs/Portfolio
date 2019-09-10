@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, withRouter, Switch } from "react-router-dom";
-import createHistory from 'history/createBrowserHistory'
 import ReactGA from 'react-ga';
+import createHistory from 'history/createBrowserHistory'
 
 import Home from '../../Pages/Home'
 import Contact from '../../Pages/Contact'
@@ -11,8 +11,8 @@ import Fixr from '../../Pages/Projects/Fixr'
 const history = createHistory()
 ReactGA.initialize('UA-131855428-2');
 history.listen((location, action) => {
-    ReactGA.pageview(location.pathname + location.search);
-    console.log(location.pathname)
+    ReactGA.pageview(location.hash.substr(1));
+    console.log(location.hash.substr(1))
 });
 
 function Container({ changeThemeColor }) {
