@@ -31,9 +31,11 @@ class Triptease extends Component {
             <Container onLoad={this.changeColor.bind(this)} className="page">
                 <ProjectSummary
                     projectLogo={Logo}
+                    logoalt={"Fixr logo"}
                     projectName="Entry Manager"
                     synopsis="A door management solution built for speed. Built on iOS and Android for both mobile and tablet devices, it aims to be the most efficient ticket scanner in the market, scanning up to 2,000 tickets an hour."
                     mainImg={img1}
+                    imagealt={"Pack shot"}
                     year='2017'
                     myrole='Project lead, UX researcher, product designer'
                     technologies="iOS app, android app, graceful service degradation"
@@ -48,6 +50,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img2}
+                    imagealt={"List view product shot"}
                 />
                 <TextSection
                     sectionHeader="The fastest flow"
@@ -60,6 +63,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img3}
+                    imagealt={"Processing timeline comparison"}
                 />
                 <TextSection
                     sectionHeader="Iterating & improving"
@@ -70,6 +74,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img4}
+                    imagealt={"Rapid scanning UI"}
                 />
             </Container>
         )

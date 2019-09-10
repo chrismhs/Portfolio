@@ -50,7 +50,7 @@ class ProjectSummary extends Component {
                         <ProjectLogo>
                             <img
                                 src={this.props.projectLogo}
-                                alt={this.props.imagealt}
+                                alt={this.props.logoalt}
                                 className="img-fluid"
                             />
                         </ProjectLogo>

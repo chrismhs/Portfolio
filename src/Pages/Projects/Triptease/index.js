@@ -35,9 +35,11 @@ class Triptease extends Component {
                 <ParticleBackground/>
                 <ProjectSummary
                     projectLogo={Logo}
+                    logoalt={"Triptease logo"}
                     projectName="A.I. in hospitality"
                     synopsis="Communication is exceptionally important in the hotel industry and with overseas calls still costing a small fortune, many guests turn to online chat to get answers to their questions. But, with profit margins being squeezed, hotels don’t have the resource to sit by the phone. That's why we built the Auto-Agent."
                     mainImg={img1}
+                    imagealt={"Chat flow UI"}
                     year='2018'
                     myrole='Product designer, Conversational interfaces'
                     technologies="Natural language processing, Intent-based analysis, State management"
@@ -53,6 +55,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img2}
+                    imagealt={"Conversation flow diagram"}
                 />
                 <TextSection
                     sectionHeader="Shortcutting onboarding"
@@ -64,6 +67,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img3}
+                    imagealt={"Pre-filled responses screenshot"}
                 />
                 <TextSection
                     sectionHeader="Graceful degradation"
@@ -74,6 +78,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img4}
+                    imagealt={"Clarification UX flow"}
                 />
                 <TextSection
                     sectionHeader="What’s next?"
@@ -85,6 +90,7 @@ class Triptease extends Component {
                 /> 
                 <SingleImage
                     imagesrc={img5}
+                    imagealt={"Clarification UI prototype"}
                 />
             </Container>
         )
