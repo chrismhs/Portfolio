@@ -20,7 +20,6 @@ const Container = styled.div`
 
 `
 
-
 class Triptease extends Component {
     changeColor(){
         this.props.changeThemeColor(theme.one)
