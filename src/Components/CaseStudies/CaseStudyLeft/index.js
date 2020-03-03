@@ -44,8 +44,18 @@ const ProjectLink =  styled(Link)`
 
 const MainImg = styled.img`
     height: 550px;
-    padding: 30px
+    padding: 30px;
 
+    ${props => props.showAnim ?
+        `display: none;` :
+        null
+    };
+
+`
+
+const AnimationContainer = styled.div`
+height: 550px;
+background-color: red;
 `
 
 class CaseStudyLeft extends Component {
@@ -69,11 +79,13 @@ class CaseStudyLeft extends Component {
                         <div className="text-center col-6 d-none d-lg-block overflow-hidden">
                             <Fade>
                                 <MainImg
+                                    showAnim={this.props.showAnim}
                                     src={this.props.mainImage}
                                     alt={this.props.imagealt}
                                     className="rounded"
                                 >
                                 </MainImg>
+                                <AnimationContainer>{this.props.imgAnim}</AnimationContainer>
                             </Fade>
                         </div>
                     </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled, { withTheme } from "styled-components"
 
 import CaseStudyLeft from './CaseStudyLeft'
+import ChatAnim from '../../Animations/ChatAnim'
 
 import theme from '../../styles/theme.style';
 
@@ -28,6 +29,8 @@ class CaseStudies extends Component {
                     logoWidth={"200px"}
                     mainImage={MainImageTriptease}
                     imagealt={'Chat dialog UI'}
+                    showAnim={true}
+                    imgAnim={ChatAnim}
                     projectLink={"/projects/triptease"}
                 />
                 <CaseStudyLeft
