@@ -9,7 +9,6 @@
 		"bootstrap": "^3.4.1",
 		"font-preloader": "^1.0.7",
 		"formik": "^1.5.8",
-		"fullpage.js": "^3.0.8",
 		"normalize.css": "^8.0.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
@@ -24,7 +23,6 @@
 		"react-scripts": "^2.1.8",
 		"react-slick": "^0.23.2",
 		"react-transition-group": "^2.9.0",
-		"slick-carousel": "^1.8.1",
 		"styled-components": "^4.4.1"
 	},
 	"scripts": {
