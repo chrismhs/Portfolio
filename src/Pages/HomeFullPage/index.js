@@ -7,11 +7,14 @@ import CaseStudyLeft from "../../Components/CaseStudies/CaseStudyLeft";
 import theme from "../../styles/theme.style";
 
 import MainImageExpress from "../../Pages/Projects/ExpressBooking/express-cover.png";
+import MainImageExpressMobile from "../../Pages/Projects/ExpressBooking/Express-Mobile.png";
 
 import LogoTriptease from "../../Pages/Projects/Triptease/Logo.png";
 import MainImageTriptease from "../../Pages/Projects/Triptease/chat-flow.png";
+import MainImageTripteaseMobile from "../../Pages/Projects/Triptease/Chat-Mobile.png";
 import LogoFixr from "../../Pages/Projects/Fixr/box-logo-red.png";
 import MainImageFixr from "../../Pages/Projects/Fixr/two-apps.png";
+import MainImageFixrMobile from "../../Pages/Projects/Fixr/EntryManager-Mobile.png";
 
 const sections = [
 	{
@@ -23,6 +26,7 @@ const sections = [
 		logoalt: "Triptease logo",
 		logoWidth: "200px",
 		mainImage: MainImageExpress,
+		mainImageMobile: MainImageExpressMobile,
 		imagealt: "Chat dialog UI",
 		projectLink: "/projects/triptease"
 	},
@@ -35,6 +39,7 @@ const sections = [
 		logoalt: "Triptease logo",
 		logoWidth: "200px",
 		mainImage: MainImageTriptease,
+		mainImageMobile: MainImageTripteaseMobile,
 		imagealt: "Chat dialog UI",
 		projectLink: "/projects/triptease"
 	},
@@ -47,6 +52,7 @@ const sections = [
 		logoalt: "Fixr logo",
 		logoWidth: "150px",
 		mainImage: MainImageFixr,
+		mainImageMobile: MainImageFixrMobile,
 		imagealt: "Scanner main list view",
 		projectLink: "/projects/fixr"
 	}

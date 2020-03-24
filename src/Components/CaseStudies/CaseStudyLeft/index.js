@@ -22,18 +22,15 @@ const ProjectLogo = styled.div`
 	@media (max-width: 992px) {
 		padding: 40px 0 40px 0;
 	}
+	@media (max-width: 767px) {
+		display: none;
+	}
 `;
 
 const ProjectLink = styled(Link)`
 	color: rgb(${props => props.projecttheme.link});
 	padding-bottom: 4px;
 	border-bottom: 2px solid rgb(${props => props.projecttheme.link});
-	opacity: 1;
-
-	.fade {
-		opacity: 0;
-		transition: opacity 1000ms;
-	}
 
 	:hover {
 		color: rgb(${props => props.projecttheme.link});
@@ -47,21 +44,24 @@ const ProjectLink = styled(Link)`
 `;
 
 const MainImg = styled.img`
-	height: 550px;
+	height: 500px;
 	padding: 30px;
 `;
 
-class CaseStudyLeft extends Component {
-	handleClick() {
-		console.log("click");
-		ProjectLink.classList.toggle("fade");
+const MainImgMobile = styled.img`
+	padding-top: 30px;
+	@media (min-width: 767px) {
+		display: none;
 	}
-	render(handleClick) {
+`;
+
+class CaseStudyLeft extends Component {
+	render() {
 		return (
 			<div>
 				<CaseStudyContainer projecttheme={this.props.projecttheme}>
 					<div className="row">
-						<div className="col-12 col-md-6">
+						<div className="col-10 col-md-6 offset-1  offset-md-0">
 							<ProjectLogo logoWidth={this.props.logoWidth}>
 								<img
 									src={this.props.logo}
@@ -78,7 +78,6 @@ class CaseStudyLeft extends Component {
 							>
 								View case study
 							</ProjectLink>
-							<button onClick={handleClick}>Fade Out</button>
 						</div>
 						<div className="text-center col-6 d-none d-md-block overflow-hidden">
 							<Fade>
@@ -90,6 +89,15 @@ class CaseStudyLeft extends Component {
 								></MainImg>
 							</Fade>
 						</div>
+
+						<Fade>
+							<MainImgMobile
+								className="img-fluid"
+								showAnim={this.props.showAnim}
+								src={this.props.mainImageMobile}
+								alt={this.props.imagealt}
+							></MainImgMobile>
+						</Fade>
 					</div>
 				</CaseStudyContainer>
 			</div>
