@@ -6,12 +6,26 @@ import Biography from "../../Components/Bio";
 import CaseStudyLeft from "../../Components/CaseStudies/CaseStudyLeft";
 import theme from "../../styles/theme.style";
 
+import MainImageExpress from "../../Pages/Projects/ExpressBooking/express-cover.png";
+
 import LogoTriptease from "../../Pages/Projects/Triptease/Logo.png";
 import MainImageTriptease from "../../Pages/Projects/Triptease/chat-flow.png";
 import LogoFixr from "../../Pages/Projects/Fixr/box-logo-red.png";
 import MainImageFixr from "../../Pages/Projects/Fixr/two-apps.png";
 
 const sections = [
+	{
+		projecttheme: theme.three,
+		title: "Express hotel booking",
+		body:
+			"Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.",
+		logo: LogoTriptease,
+		logoalt: "Triptease logo",
+		logoWidth: "200px",
+		mainImage: MainImageExpress,
+		imagealt: "Chat dialog UI",
+		projectLink: "/projects/triptease"
+	},
 	{
 		projecttheme: theme.one,
 		title: "A.I. in hospitality",

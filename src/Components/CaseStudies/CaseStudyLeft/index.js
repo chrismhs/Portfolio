@@ -28,6 +28,12 @@ const ProjectLink = styled(Link)`
 	color: rgb(${props => props.projecttheme.link});
 	padding-bottom: 4px;
 	border-bottom: 2px solid rgb(${props => props.projecttheme.link});
+	opacity: 1;
+
+	.fade {
+		opacity: 0;
+		transition: opacity 1000ms;
+	}
 
 	:hover {
 		color: rgb(${props => props.projecttheme.link});
@@ -46,7 +52,11 @@ const MainImg = styled.img`
 `;
 
 class CaseStudyLeft extends Component {
-	render() {
+	handleClick() {
+		console.log("click");
+		ProjectLink.classList.toggle("fade");
+	}
+	render(handleClick) {
 		return (
 			<div>
 				<CaseStudyContainer projecttheme={this.props.projecttheme}>
@@ -68,6 +78,7 @@ class CaseStudyLeft extends Component {
 							>
 								View case study
 							</ProjectLink>
+							<button onClick={handleClick}>Fade Out</button>
 						</div>
 						<div className="text-center col-6 d-none d-md-block overflow-hidden">
 							<Fade>
