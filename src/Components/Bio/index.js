@@ -14,7 +14,7 @@ class Biography extends React.Component {
 			<Container>
 				<div className="row">
 					<div className="col-sm-10 col-lg-7 offset-1">
-						<h1>Chris, a product designer in London.</h1>
+						<h1>A product designer in London.</h1>
 						<h4>Building digital things for 10 years.</h4>
 						<p>
 							I work at{" "}

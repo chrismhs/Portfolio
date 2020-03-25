@@ -41,6 +41,10 @@ const ProjectLink = styled(Link)`
 		color: rgb(${props => props.projecttheme.background});
 		background: rgb(${props => props.projecttheme.link});
 	}
+	@media (max-width: 767px) {
+		display: table;
+		margin: 0 auto;
+	}
 `;
 
 const MainImg = styled.img`
@@ -49,8 +53,21 @@ const MainImg = styled.img`
 `;
 
 const MainImgMobile = styled.img`
-	padding-top: 30px;
+	padding: 30px 0;
 	@media (min-width: 767px) {
+		display: none;
+	}
+`;
+
+const ProjectTitle = styled.h2`
+	@media (max-width: 767px) {
+		text-align: center;
+		font-size: 3rem;
+	}
+`;
+
+const BodyText = styled.p`
+	@media (max-width: 767px) {
 		display: none;
 	}
 `;
@@ -69,8 +86,16 @@ class CaseStudyLeft extends Component {
 									className="img-fluid"
 								/>
 							</ProjectLogo>
-							<h2>{this.props.title}</h2>
-							<p>{this.props.body}</p>
+							<ProjectTitle>{this.props.title}</ProjectTitle>
+							<BodyText>{this.props.body}</BodyText>
+							<Fade>
+								<MainImgMobile
+									className="img-fluid"
+									showAnim={this.props.showAnim}
+									src={this.props.mainImageMobile}
+									alt={this.props.imagealt}
+								></MainImgMobile>
+							</Fade>
 							<ProjectLink
 								projecttheme={this.props.projecttheme}
 								to={this.props.projectLink}
@@ -89,15 +114,6 @@ class CaseStudyLeft extends Component {
 								></MainImg>
 							</Fade>
 						</div>
-
-						<Fade>
-							<MainImgMobile
-								className="img-fluid"
-								showAnim={this.props.showAnim}
-								src={this.props.mainImageMobile}
-								alt={this.props.imagealt}
-							></MainImgMobile>
-						</Fade>
 					</div>
 				</CaseStudyContainer>
 			</div>

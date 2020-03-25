@@ -19,7 +19,7 @@ import MainImageFixrMobile from "../../Pages/Projects/Fixr/EntryManager-Mobile.p
 const sections = [
 	{
 		projecttheme: theme.three,
-		title: "Express hotel booking",
+		title: "Book hotels faster",
 		body:
 			"Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.",
 		logo: LogoTriptease,
