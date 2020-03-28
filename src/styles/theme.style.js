@@ -1,8 +1,8 @@
 export default {
 	primary: {
-		background: "255, 255, 255",
-		foreground: "27, 30, 39",
-		link: "14, 94, 206"
+		background: "13, 0, 90",
+		foreground: "237, 37, 78",
+		link: "255, 116, 143"
 	},
 	one: {
 		background: "246, 246, 246",

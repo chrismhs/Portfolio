@@ -17,19 +17,19 @@ import MainImageFixr from "../../Pages/Projects/Fixr/two-apps.png";
 import MainImageFixrMobile from "../../Pages/Projects/Fixr/EntryManager-Mobile.png";
 
 const sections = [
-	{
-		projecttheme: theme.three,
-		title: "Book hotels faster",
-		body:
-			"Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.",
-		logo: LogoTriptease,
-		logoalt: "Triptease logo",
-		logoWidth: "200px",
-		mainImage: MainImageExpress,
-		mainImageMobile: MainImageExpressMobile,
-		imagealt: "Chat dialog UI",
-		projectLink: "/projects/triptease"
-	},
+	// {
+	// 	projecttheme: theme.three,
+	// 	title: "Book hotels faster",
+	// 	body:
+	// 		"Using a conversational interface and IBM Watson to deliver timely answers to hotel website visitors to help increase conversions.",
+	// 	logo: LogoTriptease,
+	// 	logoalt: "Triptease logo",
+	// 	logoWidth: "200px",
+	// 	mainImage: MainImageExpress,
+	// 	mainImageMobile: MainImageExpressMobile,
+	// 	imagealt: "Chat dialog UI",
+	// 	projectLink: "/projects/triptease"
+	// },
 	{
 		projecttheme: theme.one,
 		title: "A.I. in hospitality",

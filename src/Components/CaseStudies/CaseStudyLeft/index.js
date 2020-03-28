@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Route, Router, Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
+import SplitText from "react-pose-text";
+
+import { headlinePoses, bodyPoses } from "../../../Animations/Poses";
 
 import Fade from "react-reveal/Fade";
 
