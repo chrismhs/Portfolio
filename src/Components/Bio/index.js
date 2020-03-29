@@ -23,22 +23,23 @@ class Biography extends React.Component {
 								pose="enter"
 								wordPoses={headlinePoses}
 							>
-								Product designer.
+								For the love of creation
 							</SplitText>
 						</h1>
 						<h4>
 							<SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
-								Building digital things for 10 years.
+								Researching, designing and building digital services for 11
+								years. Currently in London.
 							</SplitText>
 						</h4>
-						<p>
+						{/* <p>
 							<SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
 								I work at Triptease, helping hotels drive direct bookings. I'm
 								obsessed with technology and, by making things constantly, I
 								experiment with what's possible. I get my inspiration from the
 								people and products around me that I'm natually drawn to.
 							</SplitText>
-						</p>
+						</p> */}
 					</div>
 				</div>
 			</Container>

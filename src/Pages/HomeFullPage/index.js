@@ -4,6 +4,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 import Biography from "../../Components/Bio";
 import CaseStudyLeft from "../../Components/CaseStudies/CaseStudyLeft";
+import PastWork from "../../Components/PastWork";
 import theme from "../../styles/theme.style";
 
 import MainImageExpress from "../../Pages/Projects/ExpressBooking/express-cover.png";
@@ -93,6 +94,9 @@ const HomeFullPage = ({ changeThemeColor }) => (
 							<CaseStudyLeft changeThemeColor={changeThemeColor} {...details} />
 						</div>
 					))}
+					<div className="section">
+						<PastWork />
+					</div>
 				</ReactFullpage.Wrapper>
 			);
 		}}

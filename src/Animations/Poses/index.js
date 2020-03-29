@@ -5,9 +5,9 @@ export const headlinePoses = {
 		y: 0,
 		delay: ({ wordIndex }) => wordIndex * 300,
 		transition: {
-			opacity: { ease: "easeIn", duration: 1000 },
-			duration: 600,
-			ease: "circOut"
+			opacity: { ease: "easeInOut", duration: 500 },
+			duration: 1500,
+			ease: [0.24, 0.89, 0.24, 1]
 		}
 	}
 };
@@ -17,9 +17,9 @@ export const bodyPoses = {
 	enter: {
 		opacity: 1,
 		y: 0,
-		delay: 1000,
+		delay: 800,
 		transition: {
-			duration: 1000,
+			duration: 500,
 			ease: "easeIn"
 		}
 	}
