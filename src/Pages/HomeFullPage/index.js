@@ -59,6 +59,8 @@ const sections = [
 	}
 ];
 
+// const OverrideThemes = styled.style
+
 // There is one item before the case study sections in the fullpage wrapper
 const offset = 1;
 
@@ -87,7 +89,7 @@ const HomeFullPage = ({ changeThemeColor }) => (
 			return (
 				<ReactFullpage.Wrapper>
 					<div className="section">
-						<Biography changeThemeColor={changeThemeColor} />
+						<Biography />
 					</div>
 					{sections.map(details => (
 						<div key={details.title} className="section">

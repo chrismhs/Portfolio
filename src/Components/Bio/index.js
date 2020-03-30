@@ -13,6 +13,7 @@ const Container = styled.div`
 
 class Biography extends React.Component {
 	render() {
+		console.log(this.props.currentTheme);
 		return (
 			<Container>
 				<div className="row">

@@ -18,6 +18,10 @@ const Body = styled.div`
 	min-height: 100vh;
 `;
 
+const themeStyles = Object.keys(theme).map(
+	name => `#fp-nav.${name} ul li a span {background: rgb(${theme[name].link});}`
+);
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -28,6 +32,7 @@ class App extends Component {
 
 	changeThemeColor = theme => {
 		this.setState({ theme });
+		// document.getElementById("fp-nav").className = `fp-left ${theme.name}`;
 	};
 
 	render() {
@@ -37,6 +42,8 @@ class App extends Component {
 					<ThemeProvider theme={this.state.theme}>
 						<Body>
 							<div className="App">
+								<style>{themeStyles}</style>
+
 								<header className="App-header">
 									<Navigation scrolling={this.scrolling} />
 								</header>

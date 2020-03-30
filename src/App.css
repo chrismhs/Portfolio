@@ -215,3 +215,9 @@ a.fancy:hover::after {
 		font-size: 24px;
 	}
 }
+
+/* Overrides */
+#fp-nav.fp-left {
+	left: 12px !important;
+	transition: all 0.4s ease-in-out;
+}
