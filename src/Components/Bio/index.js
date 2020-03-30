@@ -4,7 +4,7 @@ import SplitText from "react-pose-text";
 
 import { headlinePoses, bodyPoses } from "../../Animations/Poses";
 
-import Link from "../Link";
+import CreationImg from "./CreationImg";
 
 const Container = styled.div`
 	padding-top: 120px;
@@ -23,9 +23,10 @@ class Biography extends React.Component {
 								pose="enter"
 								wordPoses={headlinePoses}
 							>
-								For the love of creation
+								For the love of
 							</SplitText>
 						</h1>
+						<CreationImg />
 						<h4>
 							<SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
 								Researching, designing and building digital services for 11

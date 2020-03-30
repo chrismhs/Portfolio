@@ -17,7 +17,7 @@ export const bodyPoses = {
 	enter: {
 		opacity: 1,
 		y: 0,
-		delay: 800,
+		delay: 2000,
 		transition: {
 			duration: 500,
 			ease: "easeIn"

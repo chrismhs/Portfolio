@@ -87,7 +87,7 @@ const HomeFullPage = ({ changeThemeColor }) => (
 			return (
 				<ReactFullpage.Wrapper>
 					<div className="section">
-						<Biography />
+						<Biography changeThemeColor={changeThemeColor} />
 					</div>
 					{sections.map(details => (
 						<div key={details.title} className="section">
