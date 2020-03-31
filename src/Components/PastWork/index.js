@@ -1,42 +1,104 @@
 import React from "react";
 import styled from "styled-components";
-import SplitText from "react-pose-text";
+import { BrowserRouter as Route, Router, Link } from "react-router-dom";
+import ReactGA from "react-ga";
 
-import { headlinePoses, bodyPoses } from "../../Animations/Poses";
+const SocialLinks = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+`;
 
-const Container = styled.div`
-	padding-top: 120px;
-	padding-bottom: 120px;
+const SocialLink = styled(ReactGA.OutboundLink)`
+	margin: 0 20px 20px 0;
+	color: rgb(${props => props.theme.link}) !important;
+
+	:hover {
+		color: rgb(${props => props.theme.link});
+		filter: brightness(120%);
+	}
+
+	:after {
+		color: rgb(${props => props.theme.background});
+		background: rgb(${props => props.theme.link});
+	}
+`;
+
+const ContactLink = styled(Link)`
+	margin: 0 20px 20px 0;
+	color: rgb(${props => props.theme.link});
+
+	:hover {
+		color: rgb(${props => props.theme.link});
+		filter: brightness(120%);
+	}
+
+	:after {
+		color: rgb(${props => props.theme.background});
+		background: rgb(${props => props.theme.link});
+	}
+`;
+
+const Alt1 = styled.span`
+	color: rgb(${props => props.theme.alt1});
+`;
+const Alt2 = styled.span`
+	color: rgb(${props => props.theme.alt2});
+`;
+const Alt3 = styled.span`
+	color: rgb(${props => props.theme.alt3});
+`;
+
+const Spacer = styled.div`
+	height: 100px;
 `;
 
 class PastWork extends React.Component {
 	render() {
 		return (
-			<Container>
+			<div>
 				<div className="row">
 					<div className="col-sm-10 col-lg-7 offset-1">
-						<h3>
-							<SplitText
-								initialPose="exit"
-								pose="enter"
-								wordPoses={headlinePoses}
-							>
-								Previously...
-							</SplitText>
-						</h3>
+						<h3>Previously worked with...</h3>
 						<h4>
-							<SplitText
-								initialPose="exit"
-								pose="enter"
-								wordPoses={headlinePoses}
-							>
-								Deliveroo, Albion London, Transport for London, Compare the
-								Market, Vodafone, BAE Systems Applied Intelligence.
-							</SplitText>
+							<Alt1>Deliveroo,</Alt1> <Alt2>Albion London,</Alt2>{" "}
+							<Alt3>Transport for London,</Alt3>{" "}
+							<Alt1>Compare the Market,</Alt1> <Alt2>Vodafone,</Alt2>{" "}
+							<Alt3>BAE Systems Applied Intelligence.</Alt3>
 						</h4>
+						<Spacer />
+						<SocialLinks>
+							<SocialLink
+								eventLabel="github"
+								to="https://github.com/chrismhs"
+								target="_blank"
+								className="fancy"
+							>
+								Github
+							</SocialLink>
+							<SocialLink
+								eventLabel="linkedin"
+								to="https://uk.linkedin.com/in/chrismhs"
+								target="_blank"
+								className="fancy"
+							>
+								LinkedIn
+							</SocialLink>
+							<SocialLink
+								eventLabel="medium"
+								to="https://medium.com/@chrismhs"
+								target="_blank"
+								className="fancy"
+							>
+								Medium
+							</SocialLink>
+							<ContactLink to="/contact" href="" className="fancy">
+								Contact
+							</ContactLink>
+						</SocialLinks>
 					</div>
 				</div>
-			</Container>
+			</div>
 		);
 	}
 }
