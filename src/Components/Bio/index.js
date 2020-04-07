@@ -28,7 +28,7 @@ class Biography extends React.Component {
       <Container>
         <div className="row">
           <div className="col-sm-10 col-lg-7 offset-1">
-            <ColorHeader>
+            {/* <ColorHeader>
               <SplitText
                 initialPose="exit"
                 pose="enter"
@@ -36,7 +36,7 @@ class Biography extends React.Component {
               >
                 All in the name of
               </SplitText>
-            </ColorHeader>
+            </ColorHeader> */}
             <CreationImg />
             <ColorSubHeader>
               <SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
