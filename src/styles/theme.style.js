@@ -29,10 +29,10 @@ export default {
   three: {
     background: "255, 199, 0",
     foreground: "27, 30, 39",
-    link: "87, 32, 209",
+    link: "140, 0, 109",
     alt1: "140, 0, 109",
     alt2: "197, 12, 145",
-    alt3: "255, 71, 159",
+    alt3: "255, 230, 0",
     name: "three"
   }
 };

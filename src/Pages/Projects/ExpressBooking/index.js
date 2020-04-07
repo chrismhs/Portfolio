@@ -33,7 +33,7 @@ class Express extends Component {
         <InformationNotice
           sectionHeader={"Sensitive project"}
           sectionParagraph={[
-            "This project is still in development, so it's too sensitive to release a case study at this time. If you would like to see more feel free to get in touch."
+            "This project is still in development, so it's too sensitive to release a case study at this time. If you would like to see more, please get in touch."
           ]}
         />
         <NextProjectLink

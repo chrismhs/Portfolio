@@ -5,7 +5,7 @@ import { BrowserRouter as Route, Router, Link } from "react-router-dom";
 const Container = styled.div`
   padding-top: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 const ProjectLink = styled(Link)`

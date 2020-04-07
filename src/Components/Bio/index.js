@@ -45,13 +45,13 @@ class Biography extends React.Component {
               </SplitText>
             </ColorSubHeader>
             {/* <p>
-							<SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
-								I work at Triptease, helping hotels drive direct bookings. I'm
-								obsessed with technology and, by making things constantly, I
-								experiment with what's possible. I get my inspiration from the
-								people and products around me that I'm natually drawn to.
-							</SplitText>
-						</p> */}
+              <SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
+                I work at Triptease, helping hotels drive direct bookings. I'm
+                obsessed with technology and, by making things constantly, I
+                experiment with what's possible. I get my inspiration from the
+                people and products around me that I'm natually drawn to.
+              </SplitText>
+            </p> */}
           </div>
         </div>
       </Container>

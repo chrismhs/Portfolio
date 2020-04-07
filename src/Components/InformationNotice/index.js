@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled, { withTheme } from "styled-components";
 
 const Container = styled.div`
-  padding: 40px 0 30px 0;
+  padding: 40px 20px 30px;
   text-align: center;
   border: 2px solid rgba(${props => props.theme.foreground}, 1);
 `;

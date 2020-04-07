@@ -74,20 +74,20 @@ class PastWork extends React.Component {
             <Spacer />
             <SocialLinks>
               <SocialLink
-                eventLabel="github"
-                to="https://github.com/chrismhs"
-                target="_blank"
-                className="fancy"
-              >
-                Github
-              </SocialLink>
-              <SocialLink
                 eventLabel="linkedin"
                 to="https://uk.linkedin.com/in/chrismhs"
                 target="_blank"
                 className="fancy"
               >
                 LinkedIn
+              </SocialLink>
+              <SocialLink
+                eventLabel="github"
+                to="https://github.com/chrismhs"
+                target="_blank"
+                className="fancy"
+              >
+                Github
               </SocialLink>
               <SocialLink
                 eventLabel="medium"
