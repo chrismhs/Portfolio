@@ -66,12 +66,14 @@ class ProjectSummary extends Component {
               </SplitText>
             </SectionHeader>
             <Fade delay={1500} duration={1000}>
-              <p>{this.props.synopsis}</p>
-              <MyInvolvement
-                year={this.props.year}
-                role={this.props.myrole}
-                technologies={this.props.technologies}
-              />
+              <div>
+                <p>{this.props.synopsis}</p>
+                <MyInvolvement
+                  year={this.props.year}
+                  role={this.props.myrole}
+                  technologies={this.props.technologies}
+                />
+              </div>
             </Fade>
           </div>
         </div>
