@@ -25,11 +25,6 @@ const Container = styled.div`
   }
 `;
 
-const ProjectLogo = styled.div`
-  padding: 30px 0;
-  width: 200px;
-`;
-
 const SectionHeader = styled.h1`
   padding: 50px 0 10px;
 `;
