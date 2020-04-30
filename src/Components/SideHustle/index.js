@@ -29,7 +29,7 @@ const SideHustle = () => {
   const projects = [
     {
       description:
-        "Check the size of things on Amazon before you buy them, by putting them next to a person.",
+        "Check the size of things on Amazon, by putting them next to a person.",
       linktext: "www.nexttoaperson.com",
       linkurl: "https://www.nexttoaperson.com/",
       eventlabel: "ntap",
@@ -57,7 +57,7 @@ const SideHustle = () => {
     },
     {
       description:
-        "Bell Air. An IoT physical bell that rings when a hotel guest messages on web-chat",
+        "Bell-Air. An IoT physical bell that rings when a hotel guest messages on web-chat",
       linktext: "View on GitHub",
       linkurl: "https://github.com/chrismhs/bell-air",
       eventlabel: "bell-air",

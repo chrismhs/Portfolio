@@ -73,7 +73,9 @@ const BackgroundText = styled.h1`
   text-stroke: 1px rgb(${(props) => props.theme.alt1});
 
   @media (max-width: 800px) {
-    font-size: 4rem;
+    top: 15%;
+    margin-left: -2rem;
+    font-size: 4.5rem;
   }
 `;
 

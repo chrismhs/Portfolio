@@ -25,10 +25,9 @@ const SideProjectLink = styled(ReactGA.OutboundLink)`
 `;
 
 const ContributorLink = styled.a`
-  color: rgb(255, 255, 255);
+  color: rgb(${(props) => props.theme.link});
   margin: 50px 0 0 0;
   font-weight: 400;
-  text-decoration: underline;
   transition: 0.2s ease-in-out;
 
   :hover {
@@ -48,11 +47,11 @@ class SideProject extends React.Component {
     return (
       <div>
         {/* <h3>Side hustling</h3> */}
-        <h4>
+        <h3>
           <SplitText initialPose="exit" pose="enter" wordPoses={headlinePoses}>
             {this.props.project.description}
           </SplitText>
-        </h4>
+        </h3>
         <SideProjectLink
           eventLabel={this.props.project.eventlabel}
           to={this.props.project.linkurl}
