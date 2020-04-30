@@ -62,6 +62,31 @@ const sections = [
   },
 ];
 
+const BackgroundText = styled.h1`
+  color: transparent;
+  position: absolute;
+  font-style: italic;
+  font-weight: 400;
+  top: 10%;
+  font-size: 8rem;
+  -webkit-text-stroke: 1px rgb(${(props) => props.theme.alt1});
+  text-stroke: 1px rgb(${(props) => props.theme.alt1});
+
+  @media (max-width: 800px) {
+    font-size: 4rem;
+  }
+`;
+
+const BackgroundTextShadow = styled(BackgroundText)`
+  margin: 4px 1px;
+  -webkit-text-stroke: 1px rgb(${(props) => props.theme.alt3});
+  text-stroke: 1px rgb(${(props) => props.theme.alt3});
+
+  @media (max-width: 800px) {
+    margin: 2px 1px;
+  }
+`;
+
 // const OverrideThemes = styled.style
 
 // There is one item before the case study sections in the fullpage wrapper
@@ -99,9 +124,13 @@ const HomeFullPage = ({ changeThemeColor }) => (
             </div>
           ))}
           <div className="section">
+            <BackgroundText>Previously...</BackgroundText>
+            {/* <BackgroundTextShadow>Previously...</BackgroundTextShadow> */}
             <PastWork />
           </div>
           <div className="section">
+            <BackgroundText>Experiments</BackgroundText>
+            {/* <BackgroundTextShadow>Experiments</BackgroundTextShadow> */}
             <SideHustle />
           </div>
         </ReactFullpage.Wrapper>
