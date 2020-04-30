@@ -74,18 +74,10 @@ const BackgroundText = styled.h1`
 
   @media (max-width: 800px) {
     top: 15%;
-    margin-left: -2rem;
-    font-size: 4.5rem;
-  }
-`;
-
-const BackgroundTextShadow = styled(BackgroundText)`
-  margin: 4px 1px;
-  -webkit-text-stroke: 1px rgb(${(props) => props.theme.alt3});
-  text-stroke: 1px rgb(${(props) => props.theme.alt3});
-
-  @media (max-width: 800px) {
-    margin: 2px 1px;
+    /* margin-left: -2rem; */
+    font-size: 3.5rem;
+    -webkit-text-stroke: 0.5px rgb(${(props) => props.theme.alt1});
+    text-stroke: 0.5px rgb(${(props) => props.theme.alt1});
   }
 `;
 
@@ -126,13 +118,11 @@ const HomeFullPage = ({ changeThemeColor }) => (
             </div>
           ))}
           <div className="section">
-            <BackgroundText>Previously...</BackgroundText>
-            {/* <BackgroundTextShadow>Previously...</BackgroundTextShadow> */}
+            <BackgroundText>Previously</BackgroundText>
             <PastWork />
           </div>
           <div className="section">
             <BackgroundText>Experiments</BackgroundText>
-            {/* <BackgroundTextShadow>Experiments</BackgroundTextShadow> */}
             <SideHustle />
           </div>
         </ReactFullpage.Wrapper>

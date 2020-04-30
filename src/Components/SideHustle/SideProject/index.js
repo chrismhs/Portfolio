@@ -4,7 +4,12 @@ import ReactGA from "react-ga";
 
 import SplitText from "react-pose-text";
 
-import { headlinePoses, bodyPoses } from "../../../Animations/Poses";
+import { headlinePoses } from "../../../Animations/Poses";
+
+const Container = styled.div`
+  height: 40vh;
+  min-height: 260px;
+`;
 
 const SideProjectLink = styled(ReactGA.OutboundLink)`
   margin: 0px 20px 5px 0;
@@ -45,7 +50,7 @@ const ContributorLink = styled.a`
 class SideProject extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         {/* <h3>Side hustling</h3> */}
         <h3>
           <SplitText initialPose="exit" pose="enter" wordPoses={headlinePoses}>
@@ -72,7 +77,7 @@ class SideProject extends React.Component {
             </ContributorLink>,
           ])}
         </p>
-      </div>
+      </Container>
     );
   }
 }

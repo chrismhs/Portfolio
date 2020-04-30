@@ -20,7 +20,7 @@ class PastWork extends React.Component {
       <div>
         <div className="row">
           <div className="col-sm-10 col-lg-7 offset-1">
-            <h3>Previously worked with...</h3>
+            <h3>Worked at...</h3>
             <h4>
               <Alt1>Deliveroo,</Alt1> <Alt2>Albion London,</Alt2>{" "}
               <Alt3>Transport for London,</Alt3>{" "}
