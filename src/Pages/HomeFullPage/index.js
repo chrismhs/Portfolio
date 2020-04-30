@@ -5,6 +5,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import Biography from "../../Components/Bio";
 import CaseStudyLeft from "../../Components/CaseStudies/CaseStudyLeft";
 import PastWork from "../../Components/PastWork";
+import SideHustle from "../../Components/SideHustle";
 import Three from "../../Components/Backgrounds/Three";
 
 import theme from "../../styles/theme.style";
@@ -99,6 +100,9 @@ const HomeFullPage = ({ changeThemeColor }) => (
           ))}
           <div className="section">
             <PastWork />
+          </div>
+          <div className="section">
+            <SideHustle />
           </div>
         </ReactFullpage.Wrapper>
       );

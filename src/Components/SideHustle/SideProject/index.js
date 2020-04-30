@@ -1,0 +1,81 @@
+import React from "react";
+import styled from "styled-components";
+import ReactGA from "react-ga";
+
+import SplitText from "react-pose-text";
+
+import { headlinePoses, bodyPoses } from "../../../Animations/Poses";
+
+const SideProjectLink = styled(ReactGA.OutboundLink)`
+  margin: 0px 20px 5px 0;
+  display: inline-block;
+  color: rgb(${(props) => props.theme.link}) !important;
+  transition: 0.2s ease-in-out;
+  font-size: 20px;
+
+  :hover {
+    color: rgb(${(props) => props.theme.link});
+    filter: brightness(150%);
+  }
+
+  :after {
+    color: rgb(${(props) => props.theme.background});
+    background: rgb(${(props) => props.theme.link});
+  }
+`;
+
+const ContributorLink = styled.a`
+  color: rgb(255, 255, 255);
+  margin: 50px 0 0 0;
+  font-weight: 400;
+  text-decoration: underline;
+  transition: 0.2s ease-in-out;
+
+  :hover {
+    color: rgb(${(props) => props.theme.link});
+    filter: brightness(120%);
+    text-decoration: underline;
+  }
+
+  :after {
+    color: rgb(${(props) => props.theme.background});
+    background: rgb(${(props) => props.theme.link});
+  }
+`;
+
+class SideProject extends React.Component {
+  render() {
+    return (
+      <div>
+        {/* <h3>Side hustling</h3> */}
+        <h4>
+          <SplitText initialPose="exit" pose="enter" wordPoses={headlinePoses}>
+            {this.props.project.description}
+          </SplitText>
+        </h4>
+        <SideProjectLink
+          eventLabel={this.props.project.eventlabel}
+          to={this.props.project.linkurl}
+          target="_blank"
+          // className="fancy"
+        >
+          {this.props.project.linktext}
+        </SideProjectLink>
+        <p>
+          With{" "}
+          {this.props.project.contributors.map((name, i) => [
+            i > 0 && ", ",
+            <ContributorLink
+              key={i}
+              href={this.props.project.contributorscontact[i]}
+            >
+              {name}
+            </ContributorLink>,
+          ])}
+        </p>
+      </div>
+    );
+  }
+}
+
+export default SideProject;
