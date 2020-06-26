@@ -3,6 +3,11 @@ import styled, { withTheme } from "styled-components";
 import * as THREE from "three";
 import TweenMax from "gsap";
 
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { BloomPass } from "three/examples/jsm/postprocessing/BloomPass.js";
+import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
+
 const RenderedScene = styled.div`
 	position: absolute;
 	top: 0%;
@@ -60,6 +65,7 @@ class Three extends Component {
 		this.renderer = new THREE.WebGLRenderer({ alpha: true });
 		this.renderer.setClearColor(0x000000, 0);
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
+
 		this.mount.appendChild(this.renderer.domElement); // mount using React ref
 		document.addEventListener("mousemove", (e) => {
 			mouseX = 1 - (e.pageY / window.innerWidth) * 2;
@@ -150,7 +156,9 @@ class Three extends Component {
 		this.camera.aspect = width / height;
 		this.camera.updateProjectionMatrix();
 		this.renderer.setSize(width, height);
-		this.renderer.setPixelRatio(window.devicePixelRatio);
+		this.renderer.setPixelRatio(
+			window.devicePixelRatio ? window.setPixelRatio : 1
+		);
 
 		// Note that after making changes to most of camera properties you have to call
 		// .updateProjectionMatrix for the changes to take effect.
