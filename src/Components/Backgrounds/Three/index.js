@@ -150,6 +150,7 @@ class Three extends Component {
 		this.camera.aspect = width / height;
 		this.camera.updateProjectionMatrix();
 		this.renderer.setSize(width, height);
+		this.renderer.setPixelRatio(window.devicePixelRatio);
 
 		// Note that after making changes to most of camera properties you have to call
 		// .updateProjectionMatrix for the changes to take effect.
