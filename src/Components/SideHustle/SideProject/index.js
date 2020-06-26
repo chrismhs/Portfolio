@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import ReactGA from "react-ga";
 
 import SplitText from "react-pose-text";
@@ -48,15 +48,33 @@ const ContributorLink = styled.a`
 	}
 `;
 
+const MaskedSplitText = styled(SplitText)`
+	animation: ${maskSlide} 1s linear;
+`;
+
+const maskSlide = keyframes`
+  from {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+
+  to {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+`;
+
 class SideProject extends React.Component {
 	render() {
 		return (
 			<Container>
 				{/* <h3>Side hustling</h3> */}
 				<h3>
-					<SplitText initialPose="exit" pose="enter" wordPoses={headlinePoses}>
+					<MaskedSplitText
+						initialPose="exit"
+						pose="enter"
+						wordPoses={headlinePoses}
+					>
 						{this.props.project.description}
-					</SplitText>
+					</MaskedSplitText>
 				</h3>
 				<SideProjectLink
 					eventLabel={this.props.project.eventlabel}
