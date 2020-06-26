@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled, { withTheme } from "styled-components";
 import * as THREE from "three";
+import TweenMax from "gsap";
 
 const RenderedScene = styled.div`
 	position: absolute;
@@ -72,6 +73,8 @@ class Three extends Component {
 
 		const material = new THREE.MeshBasicMaterial({
 			wireframe: true,
+			transparent: true,
+			opacity: 0,
 		});
 		const rgb = this.props.theme.alt1
 			.split(", ")
@@ -89,6 +92,8 @@ class Three extends Component {
 
 		this.scene.add(this.cone);
 		this.scene.add(this.box);
+
+		TweenMax.to(material, 4, { opacity: 1, delay: 1 });
 
 		//ADD LIGHT
 		const light1 = new THREE.DirectionalLight(0xe6308b, 2);

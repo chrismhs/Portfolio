@@ -10,6 +10,7 @@
 		"font-preloader": "^1.0.7",
 		"formik": "^1.5.8",
 		"fullpage.js": "^3.0.8",
+		"gsap": "^3.3.4",
 		"normalize.css": "^8.0.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
