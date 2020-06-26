@@ -71,29 +71,38 @@ class Three extends Component {
 		const geometryCone = new THREE.ConeBufferGeometry(1, 2, 4);
 		const geometryBox = new THREE.BoxGeometry(0.5, 0.5, 0.5);
 
-		const material = new THREE.MeshBasicMaterial({
+		const material1 = new THREE.MeshBasicMaterial({
 			wireframe: true,
 			transparent: true,
 			opacity: 0,
 		});
+		const material2 = new THREE.MeshBasicMaterial({
+			wireframe: true,
+			transparent: true,
+			opacity: 0,
+		});
+
 		const rgb = this.props.theme.alt1
 			.split(", ")
 			.map((v) => parseInt(v) / 255.0);
-		material.color.setRGB(...rgb);
 
-		this.cone = new THREE.Mesh(geometryCone, material);
+		material1.color.setRGB(...rgb);
+		material2.color.setRGB(...rgb);
+
+		this.cone = new THREE.Mesh(geometryCone, material1);
 		this.cone.position.x = 1 / (window.innerWidth / (window.innerWidth * 0.85));
 		this.cone.position.y =
-			1 / 1 - window.innerHeight / (window.innerHeight * 0.5);
+			1 / 1 - window.innerHeight / (window.innerHeight * 0.4);
 
-		this.box = new THREE.Mesh(geometryBox, material);
+		this.box = new THREE.Mesh(geometryBox, material2);
 		this.box.position.x = 1 / (window.innerWidth / (window.innerWidth * 0.4));
 		this.box.position.y = 1 / (window.innerHeight / (window.innerHeight * 1.5));
 
 		this.scene.add(this.cone);
 		this.scene.add(this.box);
 
-		TweenMax.to(material, 4, { opacity: 1, delay: 1 });
+		TweenMax.to(material1, 4, { opacity: 1, delay: 1 });
+		TweenMax.to(material2, 4, { opacity: 1, delay: 2 });
 
 		//ADD LIGHT
 		const light1 = new THREE.DirectionalLight(0xe6308b, 2);
@@ -122,6 +131,9 @@ class Three extends Component {
 		this.cone.rotation.z = 0.6 - currentRotationX / 5 + currentRotationY / 5;
 		this.box.rotation.x += 0.001;
 		this.box.rotation.z += 0.002;
+
+		// this.box.position.x -= 0.0005;
+
 		this.renderer.render(this.scene, this.camera);
 
 		// The window.requestAnimationFrame() method tells the browser that you wish to perform
