@@ -61,8 +61,7 @@ class Three extends Component {
 		);
 		this.camera.position.z = 7;
 
-		this.renderer = new THREE.WebGLRenderer({ antialias: true });
-		this.renderer = new THREE.WebGLRenderer({ alpha: true });
+		this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 		this.renderer.setClearColor(0x000000, 0);
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -156,9 +155,7 @@ class Three extends Component {
 		this.camera.aspect = width / height;
 		this.camera.updateProjectionMatrix();
 		this.renderer.setSize(width, height);
-		this.renderer.setPixelRatio(
-			window.devicePixelRatio ? window.setPixelRatio : 1
-		);
+		this.renderer.setPixelRatio(3);
 
 		// Note that after making changes to most of camera properties you have to call
 		// .updateProjectionMatrix for the changes to take effect.
@@ -168,9 +165,7 @@ class Three extends Component {
 		mouse.y = event.clientY - windowHalf.x;
 		console.log(mouse.x);
 	}
-	renderScene = () => {
-		this.renderer.render(this.scene, this.camera);
-	};
+
 	render() {
 		return (
 			<div>
