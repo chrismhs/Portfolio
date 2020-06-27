@@ -12,25 +12,26 @@ import Container from "./Components/Container";
 import Footer from "./Components/Footer";
 
 const Body = styled.div`
-	background-color: rgb(${props => props.theme.background});
-	color: rgb(${props => props.theme.foreground});
+	background-color: rgb(${(props) => props.theme.background});
+	color: rgb(${(props) => props.theme.foreground});
 	transition: 0.4s ease-in-out 0.3s;
 	min-height: 100vh;
 `;
 
 const themeStyles = Object.keys(theme).map(
-	name => `#fp-nav.${name} ul li a span {background: rgb(${theme[name].link});}`
+	(name) =>
+		`#fp-nav.${name} ul li a span {background: rgb(${theme[name].link});}`
 );
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			theme: theme.primary
+			theme: theme.primary,
 		};
 	}
 
-	changeThemeColor = theme => {
+	changeThemeColor = (theme) => {
 		this.setState({ theme });
 		// document.getElementById("fp-nav").className = `fp-left ${theme.name}`;
 	};

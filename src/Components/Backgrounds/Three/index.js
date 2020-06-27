@@ -3,11 +3,6 @@ import styled, { withTheme } from "styled-components";
 import * as THREE from "three";
 import TweenMax from "gsap";
 
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { BloomPass } from "three/examples/jsm/postprocessing/BloomPass.js";
-import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
-
 const RenderedScene = styled.div`
 	position: absolute;
 	top: 0%;
@@ -54,12 +49,12 @@ class Three extends Component {
 		this.scene = new THREE.Scene();
 		//ADD CAMERA
 		this.camera = new THREE.PerspectiveCamera(
-			45,
+			30,
 			window.innerWidth / window.innerHeight,
 			0.1,
 			500
 		);
-		this.camera.position.z = 7;
+		this.camera.position.z = 11;
 
 		this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 		this.renderer.setClearColor(0x000000, 0);
@@ -73,26 +68,30 @@ class Three extends Component {
 	};
 
 	addCustomSceneObjects = () => {
-		const geometryCone = new THREE.ConeBufferGeometry(1, 2, 4);
+		const geometryCone = new THREE.ConeBufferGeometry(1, 1.6, 4);
 		const geometryBox = new THREE.BoxGeometry(0.5, 0.5, 0.5);
 
-		const material1 = new THREE.MeshBasicMaterial({
-			wireframe: true,
+		const material1 = new THREE.MeshStandardMaterial({
+			// wireframe: true,
 			transparent: true,
 			opacity: 0,
 		});
-		const material2 = new THREE.MeshBasicMaterial({
-			wireframe: true,
+		const material2 = new THREE.MeshStandardMaterial({
+			// wireframe: true,
 			transparent: true,
 			opacity: 0,
 		});
 
-		const rgb = this.props.theme.alt1
+		const rgb1 = this.props.theme.alt1
 			.split(", ")
 			.map((v) => parseInt(v) / 255.0);
 
-		material1.color.setRGB(...rgb);
-		material2.color.setRGB(...rgb);
+		const rgb2 = this.props.theme.alt3
+			.split(", ")
+			.map((v) => parseInt(v) / 255.0);
+
+		var color1 = new THREE.Color(...rgb1);
+		var color2 = new THREE.Color(...rgb2);
 
 		this.cone = new THREE.Mesh(geometryCone, material1);
 		this.cone.position.x = 1 / (window.innerWidth / (window.innerWidth * 0.85));
@@ -110,11 +109,11 @@ class Three extends Component {
 		TweenMax.to(material2, 4, { opacity: 1, delay: 2 });
 
 		//ADD LIGHT
-		const light1 = new THREE.DirectionalLight(0xe6308b, 2);
-		light1.position.set(-20, 10, -20);
-		const light2 = new THREE.DirectionalLight(0x30d4e6, 1);
-		light2.position.set(30, 0, 20);
-		// const light3 = new THREE.AmbientLight(0xffffff, 0.2);
+		const light1 = new THREE.RectAreaLight(color2, 10, 10, 10);
+		light1.position.set(10, 10, 10);
+		const light2 = new THREE.RectAreaLight(color1, 20, 10, 10);
+		light2.position.set(-10, -10, 10);
+		// const light3 = new THREE.AmbientLight(color1, 0.2); //for wireframe mode
 		this.scene.add(light1, light2);
 	};
 
@@ -155,7 +154,9 @@ class Three extends Component {
 		this.camera.aspect = width / height;
 		this.camera.updateProjectionMatrix();
 		this.renderer.setSize(width, height);
-		this.renderer.setPixelRatio(3);
+		this.renderer.setPixelRatio(
+			window.devicePixelRatio ? window.setPixelRatio : 1
+		);
 
 		// Note that after making changes to most of camera properties you have to call
 		// .updateProjectionMatrix for the changes to take effect.
