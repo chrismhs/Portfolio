@@ -4,7 +4,6 @@ import { HashRouter } from "react-router-dom";
 
 import styled, { ThemeProvider } from "styled-components";
 import ScrollToTop from "react-router-scroll-top";
-import MetaTags from "react-meta-tags";
 
 import theme from "./styles/theme.style";
 
@@ -40,15 +39,6 @@ class App extends Component {
 	render() {
 		return (
 			<HashRouter>
-				<MetaTags>
-					<meta
-						name="description"
-						content="Researching, designing and building digital services for 11
-								years. Currently in London."
-					/>
-					<meta property="og:title" content="Chris' Portfolio" />
-					<meta property="og:image" content="src\img\ogImage.png" />
-				</MetaTags>
 				<ScrollToTop>
 					<ThemeProvider theme={this.state.theme}>
 						<Body>
