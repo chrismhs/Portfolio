@@ -92,7 +92,7 @@ const HomeFullPage = ({ changeThemeColor }) => (
 		licenseKey={"A341060D-3A10479E-BD586A91-E1D154F8"}
 		scrollingSpeed={1000}
 		easingcss3={"cubic-bezier(.65,0,.35,1)"}
-		onLeave={(o, destination, d) => {
+		onLeave={(origin, destination, direction) => {
 			const usePrimaryTheme =
 				destination.index < offset ||
 				destination.index >= sections.length + offset;
@@ -101,8 +101,15 @@ const HomeFullPage = ({ changeThemeColor }) => (
 				? theme.primary
 				: sections[destination.index - 1].projecttheme;
 			changeThemeColor(newTheme);
+			console.log(destination.index);
+			// unmountComponentAtNode(document.getElementsByClassName("section")[0]);
 		}}
-		navigation={true}
+		// afterLoad={(origin, destination, direction) => {
+		// 	document.getElementsByClassName("active");
+
+		// 	console.log(document.getElementsByClassName("section")[0]);
+		// }}
+		// navigation={true}
 		navigationPosition={"left"}
 		fadingEffect={false}
 		render={({ state, fullpageApi }) => {
