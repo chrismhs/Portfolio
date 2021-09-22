@@ -17,6 +17,11 @@ const ColorSubHeader = styled.h4`
 	user-select: none;
 `;
 
+const Alt1 = styled.span`
+  color: rgb(${(props) => props.theme.alt1});
+  transition: 0.4s ease-in-out 0.3s;
+`;
+
 class Biography extends React.Component {
 	render() {
 		return (
@@ -26,8 +31,8 @@ class Biography extends React.Component {
 						<CreationImg />
 						<ColorSubHeader>
 							<SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
-								Researching, designing and building digital services for 11
-								years. Currently in London.
+								Researching, designing and building digital services for 12
+								years. Currently in Vancouver.
 							</SplitText>
 						</ColorSubHeader>
 					</div>
