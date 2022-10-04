@@ -27,12 +27,31 @@ const NextProject = styled.button`
 
 const SideHustle = () => {
   const projects = [
+    
     {
       description:
         "Check the size of things on Amazon, by putting them next to a person.",
       linktext: "www.nexttoaperson.com",
       linkurl: "https://www.nexttoaperson.com/",
       eventlabel: "ntap",
+      contributors: ["João Martins"],
+      contributorscontact: ["https://jvmartins.com/"],
+    },
+    {
+      description:
+        "A simple website and logo for a DJ. A fun project to explore WebGL. ",
+      linktext: "Visit website",
+      linkurl: "https://www.artemixdj.com/",
+      eventlabel: "artemix",
+      contributors: ["JP"],
+      contributorscontact: ["https://byjp.me/"],
+    },
+    {
+      description:
+        "Bell-Air. An IoT physical bell that rings when a hotel guest messages on web-chat",
+      linktext: "View on GitHub",
+      linkurl: "https://github.com/chrismhs/bell-air",
+      eventlabel: "bell-air",
       contributors: ["João Martins"],
       contributorscontact: ["https://jvmartins.com/"],
     },
@@ -55,15 +74,7 @@ const SideHustle = () => {
         "https://github.com/tdamant",
       ],
     },
-    {
-      description:
-        "Bell-Air. An IoT physical bell that rings when a hotel guest messages on web-chat",
-      linktext: "View on GitHub",
-      linkurl: "https://github.com/chrismhs/bell-air",
-      eventlabel: "bell-air",
-      contributors: ["João Martins"],
-      contributorscontact: ["https://jvmartins.com/"],
-    },
+    
   ];
 
   const [projectIndex, setProjectIndex] = useState(0);
