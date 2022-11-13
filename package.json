@@ -24,7 +24,7 @@
 		"react-reveal": "^1.2.2",
 		"react-router-dom": "^4.4.0-beta.8",
 		"react-router-scroll-top": "^0.1.1",
-		"react-scripts": "^2.1.8",
+		"react-scripts": "^5.0.1",
 		"react-slick": "^0.23.2",
 		"react-transition-group": "^2.9.0",
 		"styled-components": "^4.4.1",
