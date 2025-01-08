@@ -31,7 +31,7 @@ class Biography extends React.Component {
 						<CreationImg />
 						<ColorSubHeader>
 							<SplitText initialPose="exit" pose="enter" wordPoses={bodyPoses}>
-								Researching, designing and building digital services for 12
+								Researching, designing and building digital services for 16
 								years. Currently in Vancouver.
 							</SplitText>
 						</ColorSubHeader>
