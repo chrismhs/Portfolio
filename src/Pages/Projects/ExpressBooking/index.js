@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled, { withTheme } from "styled-components";
-import { BrowserRouter as Route, Router, Link } from "react-router-dom";
 
 import theme from "../../../styles/theme.style";
 

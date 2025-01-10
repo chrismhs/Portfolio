@@ -48,10 +48,6 @@ const ContributorLink = styled.a`
 	}
 `;
 
-const MaskedSplitText = styled(SplitText)`
-	animation: ${maskSlide} 1s linear;
-`;
-
 const maskSlide = keyframes`
   from {
     clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0% 0%);
@@ -60,6 +56,10 @@ const maskSlide = keyframes`
   to {
     clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0% 0%);
   }
+`;
+
+const MaskedSplitText = styled(SplitText)`
+	animation: ${maskSlide} 1s linear;
 `;
 
 class SideProject extends React.Component {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled, { withTheme } from "styled-components";
-import { BrowserRouter as Route, Router, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import ReactGA from "react-ga";
 
 const Container = styled.div`

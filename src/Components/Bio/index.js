@@ -17,11 +17,6 @@ const ColorSubHeader = styled.h4`
 	user-select: none;
 `;
 
-const Alt1 = styled.span`
-  color: rgb(${(props) => props.theme.alt1});
-  transition: 0.4s ease-in-out 0.3s;
-`;
-
 class Biography extends React.Component {
 	render() {
 		return (

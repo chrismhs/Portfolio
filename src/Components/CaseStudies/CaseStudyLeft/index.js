@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Route, Router, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
 
 import Fade from "react-reveal/Fade";
